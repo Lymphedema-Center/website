@@ -7,7 +7,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Spencer Duball <spencer-duball@uiowa.edu>",
   "license": "ISC",
@@ -19,13 +21,19 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
     "@cypress/webpack-preprocessor": "^4.1.1",
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/react": "^5.3.9",
     "@types/node": "^13.5.1",
     "@types/react": "^16.9.19",
     "@types/styled-components": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.7",
     "cypress": "^3.8.3",
     "eslint": "^6.8.0",
