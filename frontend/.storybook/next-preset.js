@@ -26,7 +26,8 @@ module.exports = {
           options: {
             presets: ["next/babel"]
           }
-        }
+        },
+        require.resolve("react-docgen-typescript-loader")
       ]
     });
     newConfig.resolve.extensions.push(".ts", ".tsx");
