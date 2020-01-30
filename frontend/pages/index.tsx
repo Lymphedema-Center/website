@@ -6,6 +6,7 @@ const StyledDiv = styled.div`
 `;
 
 const HomePage = () => {
+  console.log(process.env.TESTER);
   return <StyledDiv>Welcome to Next.js!</StyledDiv>;
 };
 
