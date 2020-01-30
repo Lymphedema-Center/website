@@ -1,15 +1,39 @@
-describe("My First Test", () => {
-  it("Visits the Kitchen Sink", () => {
-    cy.visit("https://example.cypress.io");
+// -- Start: Out Application Code --
+const fizzbuzz = (num: number) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "fizzbuzz";
+  }
 
-    cy.contains("type").click();
+  if (num % 3 === 0) {
+    return "fizz";
+  }
 
-    // should be on a new URL which includes '/commands/actions'
-    cy.url().should("include", "/commands/actions");
+  if (num % 5 === 0) {
+    return "buzz";
+  }
+};
+// -- End: Our Application Code --
 
-    // Get an input, type into it and verify that the value has been updated
-    cy.get(".action-email")
-      .type("fake@email.com")
-      .should("have.value", "fake@email.com");
+// -- Start: Our Cypress Tests --
+describe("Unit Test FizzBuzz", () => {
+  const numsExpectedToEq = (arr: number[], expected: string) => {
+    // loop through the array of nums and make sure they equal what
+    // is expected
+    arr.forEach(num => {
+      expect(fizzbuzz(num)).to.eq(expected);
+    });
+  };
+
+  it('returns "fizz" when number is multiple of 3', () => {
+    numsExpectedToEq([9, 12, 18], "fizz");
+  });
+
+  it.only('returns "buzz" when number is multiple of 5', () => {
+    numsExpectedToEq([10, 20, 25], "buzz");
+  });
+
+  it('returns "fizzbuzz" when number is multiple of both 3 and 5', () => {
+    numsExpectedToEq([15, 30, 60], "fizzbuzz");
   });
 });
+// -- End: Our Cypress Tests --
