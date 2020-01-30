@@ -4,21 +4,20 @@ module.exports = {
   devtool: "eval-source-map",
   // webpack will transpile TS and JS files
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: [".tsx", ".js"]
   },
   module: {
     rules: [
       {
         // every time webpack sees a TS file (except for node_modules)
         // webpack will use "ts-loader" to transpile it to JavaScript
-        test: /\.ts$/,
-        exclude: [/node_modules/],
+        test: /\.(ts|tsx)$/,
+        exclude: [/node_modules/, /stories/],
         use: [
           {
-            loader: "ts-loader",
+            loader: "babel-loader",
             options: {
-              // skip typechecking for speed
-              transpileOnly: true
+              presets: ["next/babel"]
             }
           }
         ]

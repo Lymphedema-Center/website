@@ -20,4 +20,5 @@ module.exports = (on, config) => {
   };
 
   on("file:preprocessor", wp(options));
+  on("task", require("@cypress/code-coverage/task"));
 };
