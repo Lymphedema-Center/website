@@ -21,3 +21,6 @@ import "./commands";
 
 // import code-coverage commands
 import "@cypress/code-coverage/support";
+
+// import react-unit-test commands
+import "cypress-react-unit-test";
