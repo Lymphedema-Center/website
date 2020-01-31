@@ -1,6 +1,16 @@
 #!/usr/bin/env node
 import cdk = require("@aws-cdk/core");
-import { BackendStack } from "../src/backend-stack";
+import { FrontendStack } from "../src/stacks/FrontendStack";
 
+// create app
 const app = new cdk.App();
-new BackendStack(app, "BackendStack");
+
+// add stacks
+new FrontendStack(app, "FrontendStack");
+
+// tag app
+cdk.Tag.add(
+  app,
+  "Lymphedema-Center",
+  "Part of the Lymphedema Center application."
+);
