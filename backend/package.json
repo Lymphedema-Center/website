@@ -5,8 +5,8 @@
     "backend": "bin/backend.js"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "tsc src/**.ts",
+    "watch": "tsc -w src/**.ts",
     "test": "jest",
     "cdk": "cdk"
   },

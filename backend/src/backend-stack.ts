@@ -1,4 +1,4 @@
-import * as cdk from '@aws-cdk/core';
+import cdk = require("@aws-cdk/core");
 
 export class BackendStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
