@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-As a <!-- [developer, moderator, logged-in-user, public-user] -->
+As a **[developer, moderator, logged-in-user, public-user]**
 
-I want to <!-- Ex: be able to visit the /login page -->
+I want to **be able to visit the /login page**
 
-So that <!-- Ex: I can login to my account --> 
+So that **I can login to my account**
 
-Metric: <!-- Optional: Within 1 button click of visiting the home page -->
+Metric: **Within 1 button click of visiting the home page**
