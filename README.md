@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Lymphedema-Center/website/blob/master/README.md">
+  <a href="https://github.com/Lymphedema-Center/website/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License" />
   </a>
   <a href="https://cypress.io">
