@@ -1,8 +1,9 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { Button } from "@storybook/react/demo";
 import { action } from "@storybook/addon-actions";
+import { withA11y } from "@storybook/addon-a11y";
 
-<Meta title="MDX/Checkbox" component={Button} />
+<Meta title="MDX/Checkbox" component={Button} decorators={[withA11y]}/>
 
 # Checkbox
 
