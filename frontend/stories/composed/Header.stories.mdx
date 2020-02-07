@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import Header from "../../components/composed/Header";
+
+<Meta
+  title="composed/Header"
+  component={Header}
+  decorators={[withA11y]}
+/>
+
+# Header
+
+<Subtitle>The header of the app.</Subtitle>
+
+<Preview>
+  <Story name="default">
+    <Header />
+  </Story>
+</Preview>
