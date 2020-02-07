@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import ResetIcon from "../../../components/svg/icon/ResetIcon";
+
+<Meta
+  title="svg/icon/ResetIcon"
+  component={ResetIcon}
+  decorators={[withA11y]}
+/>
+
+# ResetIcon
+
+<Subtitle>A reset icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <ResetIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

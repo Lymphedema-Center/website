@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import PreviousIcon from "../../../components/svg/icon/PreviousIcon";
+
+<Meta
+  title="svg/icon/PreviousIcon"
+  component={PreviousIcon}
+  decorators={[withA11y]}
+/>
+
+# PreviousIcon
+
+<Subtitle>A previous icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <PreviousIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
