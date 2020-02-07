@@ -1,11 +1,21 @@
 import React from "react";
+import { filterProps } from "../../helpers";
 
-const EditIcon = (props: React.SVGAttributes<SVGSVGElement>) => (
+interface AvatarIconProps extends React.SVGAttributes<SVGSVGElement> {
+  /** Should be size in pixels or percent, `"100px"` or `"25%"`. */
+  size?: string;
+  /** Should be any css compliant color string, `#434343"`. */
+  color?: string;
+}
+
+const AvatarIcon = (props: AvatarIconProps) => (
   <svg
     viewBox="0 0 24 24"
-    fill="#434343"
+    fill={props.color ? props.color : "#434343"}
+    height={props.size ? props.size : null}
+    width={props.size ? props.size : null}
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
+    {...filterProps(props, ["color", "size"])}
   >
     <path
       fillRule="evenodd"
@@ -15,4 +25,4 @@ const EditIcon = (props: React.SVGAttributes<SVGSVGElement>) => (
   </svg>
 );
 
-export default EditIcon;
+export default AvatarIcon;
