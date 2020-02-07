@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import FirstNameIcon from "../../../components/svg/icon/FirstNameIcon";
+
+<Meta
+  title="svg/icon/FirstNameIcon"
+  component={FirstNameIcon}
+  decorators={[withA11y]}
+/>
+
+# FirstNameIcon
+
+<Subtitle>A firstname icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <FirstNameIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

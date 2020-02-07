@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import LastNameIcon from "../../../components/svg/icon/LastNameIcon";
+
+<Meta
+  title="svg/icon/LastNameIcon"
+  component={LastNameIcon}
+  decorators={[withA11y]}
+/>
+
+# LastNameIcon
+
+<Subtitle>A last name icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <LastNameIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

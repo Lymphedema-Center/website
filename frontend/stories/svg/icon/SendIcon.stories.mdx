@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import SendIcon from "../../../components/svg/icon/SendIcon";
+
+<Meta
+  title="svg/icon/SendIcon"
+  component={SendIcon}
+  decorators={[withA11y]}
+/>
+
+# SendIcon
+
+<Subtitle>A send icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <SendIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

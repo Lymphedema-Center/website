@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import EmailIcon from "../../../components/svg/icon/EmailIcon";
+
+<Meta
+  title="svg/icon/EmailIcon"
+  component={EmailIcon}
+  decorators={[withA11y]}
+/>
+
+# EmailIcon
+
+<Subtitle>A email icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <EmailIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
