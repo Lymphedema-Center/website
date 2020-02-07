@@ -1,8 +1,14 @@
 import React from "react";
-import IconProps from "./IconProps";
 import { filterProps } from "../../helpers";
 
-const AvatarIcon = (props: IconProps) => (
+interface AvatarIconProps extends React.SVGAttributes<SVGSVGElement> {
+  /** Should be size in pixels or percent, `"100px"` or `"25%"`. */
+  size?: string;
+  /** Should be any css compliant color string, `#434343"`. */
+  color?: string;
+}
+
+const AvatarIcon = (props: AvatarIconProps) => (
   <svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#434343"}
