@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import Header2Icon from "../../../components/svg/icon/Header2Icon";
+
+<Meta
+  title="svg/icon/Header2Icon"
+  component={Header2Icon}
+  decorators={[withA11y]}
+/>
+
+# Header2Icon
+
+<Subtitle>A Header2 icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <Header2Icon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
