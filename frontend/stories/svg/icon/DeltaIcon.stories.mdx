@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import DeltaIcon from "../../../components/svg/icon/DeltaIcon";
+
+<Meta
+  title="svg/icon/DeltaIcon"
+  component={DeltaIcon}
+  decorators={[withA11y]}
+/>
+
+# DeltaIcon
+
+<Subtitle>A delta icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <DeltaIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

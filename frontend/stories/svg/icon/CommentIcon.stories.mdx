@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import CommentIcon from "../../../components/svg/icon/CommentIcon";
+
+<Meta
+  title="svg/icon/CommentIcon"
+  component={CommentIcon}
+  decorators={[withA11y]}
+/>
+
+# CommentIcon
+
+<Subtitle>A comment icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <CommentIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

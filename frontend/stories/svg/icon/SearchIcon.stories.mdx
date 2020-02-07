@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import SearchIcon from "../../../components/svg/icon/SearchIcon";
+
+<Meta
+  title="svg/icon/SearchIcon"
+  component={SearchIcon}
+  decorators={[withA11y]}
+/>
+
+# SearchIcon
+
+<Subtitle>A search icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <SearchIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

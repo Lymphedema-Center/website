@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import NotebookIcon from "../../../components/svg/icon/NotebookIcon";
+
+<Meta
+  title="svg/icon/NotebookIcon"
+  component={NotebookIcon}
+  decorators={[withA11y]}
+/>
+
+# NotebookIcon
+
+<Subtitle>A notebook icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <NotebookIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
