@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import ErrorIcon from "../../../components/svg/icon/ErrorIcon";
+
+<Meta
+  title="svg/icon/ErrorIcon"
+  component={ErrorIcon}
+  decorators={[withA11y]}
+/>
+
+# ErrorIcon
+
+<Subtitle>A error icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <ErrorIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

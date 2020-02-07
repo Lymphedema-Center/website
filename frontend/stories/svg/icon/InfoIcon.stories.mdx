@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import InfoIcon from "../../../components/svg/icon/InfoIcon";
+
+<Meta
+  title="svg/icon/InfoIcon"
+  component={InfoIcon}
+  decorators={[withA11y]}
+/>
+
+# InfoIcon
+
+<Subtitle>A info icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <InfoIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
