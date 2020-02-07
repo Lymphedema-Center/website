@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import FingerprintIcon from "../../../components/svg/icon/FingerprintIcon";
+
+<Meta
+  title="svg/icon/FingerprintIcon"
+  component={FingerprintIcon}
+  decorators={[withA11y]}
+/>
+
+# FingerprintIcon
+
+<Subtitle>A fingerprint icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <FingerprintIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
