@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import SignUpIcon from "../../../components/svg/icon/SignUpIcon";
+
+<Meta
+  title="svg/icon/SignUpIcon"
+  component={SignUpIcon}
+  decorators={[withA11y]}
+/>
+
+# SignUpIcon
+
+<Subtitle>A SignUp icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <SignUpIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

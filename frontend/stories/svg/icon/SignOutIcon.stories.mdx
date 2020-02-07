@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import SignOutIcon from "../../../components/svg/icon/SignOutIcon";
+
+<Meta
+  title="svg/icon/SignOutIcon"
+  component={SignOutIcon}
+  decorators={[withA11y]}
+/>
+
+# SignOutIcon
+
+<Subtitle>A SignOut icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <SignOutIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
