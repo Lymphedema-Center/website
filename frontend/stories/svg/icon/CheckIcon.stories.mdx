@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import CheckIcon from "../../../components/svg/icon/CheckIcon";
+
+<Meta
+  title="svg/icon/CheckIcon"
+  component={CheckIcon}
+  decorators={[withA11y]}
+/>
+
+# CheckIcon
+
+<Subtitle>A check icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <CheckIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
