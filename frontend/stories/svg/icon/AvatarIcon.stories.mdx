@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import AvatarIcon from "../../../components/svg/icon/AvatarIcon";
+
+<Meta
+  title="svg/icon/AvatarIcon"
+  component={AvatarIcon}
+  decorators={[withA11y]}
+/>
+
+# AvatarIcon
+
+<Subtitle>A avatar icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <AvatarIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>

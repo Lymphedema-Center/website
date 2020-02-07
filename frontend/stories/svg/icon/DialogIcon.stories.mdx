@@ -1,0 +1,19 @@
+import { Meta, Story, Preview, Props, Subtitle } from "@storybook/addon-docs/blocks";
+import { withA11y } from "@storybook/addon-a11y";
+import DialogIcon from "../../../components/svg/icon/DialogIcon";
+
+<Meta
+  title="svg/icon/DialogIcon"
+  component={DialogIcon}
+  decorators={[withA11y]}
+/>
+
+# DialogIcon
+
+<Subtitle>A dialog icon.</Subtitle>
+
+<Preview>
+  <Story name="24x24">
+    <DialogIcon style={{ height: "24px", width: "24px" }} />
+  </Story>
+</Preview>
