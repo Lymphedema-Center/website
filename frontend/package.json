@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
-    "@cypress/code-coverage": "^1.11.0",
+    "@cypress/code-coverage": "^1.11.1",
     "@cypress/webpack-preprocessor": "^4.1.1",
     "@istanbuljs/nyc-config-babel": "^3.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
@@ -44,7 +44,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-styled-components": "^1.10.7",
-    "cypress": "^4.0.0",
+    "cypress": "^4.0.1",
     "cypress-react-unit-test": "^2.4.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",

@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Work Sans", sans-serif;
+}
+
+#__next {
+  height: 100%;
+  width: 100%;
+}
