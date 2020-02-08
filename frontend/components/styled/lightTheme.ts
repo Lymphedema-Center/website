@@ -5,7 +5,7 @@ const lightTheme: DefaultTheme = {
     maxWidth: "1400px",
     small: {
       breakpoint: "320px",
-      margin: "20px"
+      margin: "10px"
     }
   },
   colors: {

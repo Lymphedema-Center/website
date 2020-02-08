@@ -66,5 +66,13 @@ describe("computeAspectRatio helper", function() {
     }).to.throw(
       `'dimension' must be a valid css 'height' or 'width' string, got ${noDimension}`
     );
+
+    // incorrect unit
+    const incorrectUnit = "28%";
+    expect(function() {
+      computeAspectRatio(incorrectUnit, 3 / 4);
+    }).to.throw(
+      `'dimension' must be a valid css 'height' or 'width' string, got ${incorrectUnit}`
+    );
   });
 });

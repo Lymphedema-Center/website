@@ -2,9 +2,9 @@ import React from "react";
 import { filterProps, computeAspectRatio } from "../../helpers";
 
 interface LymphedemaCenterLogoProps extends React.SVGAttributes<SVGSVGElement> {
-  /** Use EITHER height or width. The other will be computed to maintain aspect ratio. */
+  /** Use EITHER height or width in pixels. The other will be computed to maintain aspect ratio. */
   height?: string;
-  /** Use EITHER height or width. The other will be computed to maintain aspect ration. */
+  /** Use EITHER height or width in pixels. The other will be computed to maintain aspect ratio. */
   width?: string;
 }
 
@@ -15,7 +15,7 @@ const LymphedemaCenterLogo = (props: LymphedemaCenterLogoProps) => (
       props.width
         ? props.width
         : props.height
-        ? computeAspectRatio(props.height, 1049 / 317)
+        ? computeAspectRatio(props.height, 1049 / 371)
         : null
     }
     height={
