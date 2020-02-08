@@ -12,5 +12,8 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-a11y/register"
   ],
-  presets: [path.resolve(__dirname, "./next-preset.js")]
+  presets: [
+    path.resolve(__dirname, "./next-preset.js"),
+    path.resolve(__dirname, "./css-preset.js")
+  ]
 };

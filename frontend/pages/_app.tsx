@@ -5,7 +5,7 @@ import lightTheme from "../components/styled/lightTheme";
 
 // load global stylesheets
 import "../node_modules/normalize.css/normalize.css";
-import "../components/css/global.css";
+import "../css/global.css";
 
 export default class MyApp extends App {
   render() {

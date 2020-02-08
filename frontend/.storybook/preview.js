@@ -3,6 +3,10 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ThemeProvider } from "styled-components";
 import lightTheme from "../components/styled/lightTheme";
 
+// load css
+import "../node_modules/normalize.css/normalize.css";
+import "../css/global.css";
+
 addDecorator(storyFn => (
   <ThemeProvider theme={lightTheme}>{storyFn()}</ThemeProvider>
 ));

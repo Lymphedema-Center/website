@@ -7,6 +7,10 @@ const Container = styled.header`
   width: 100%;
 `;
 
+const HamburgerButton = styled.button`
+  background-color: blue;
+`;
+
 const Header = (props: React.HTMLAttributes<HTMLDivElement>) => <Container />;
 
 export default Header;
