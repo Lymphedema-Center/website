@@ -1,6 +1,8 @@
 import React from "react";
 import SvgButton from "../../../../components/button/SvgButton";
 import HamburgerIcon from "../../../../components/svg/icon/HamburgerIcon";
+import { ThemeProvider } from "styled-components";
+import lightTheme from "../../../../components/styled/lightTheme";
 
 describe("SvgButton component", function() {
   const svgSize = "30px";
@@ -9,13 +11,15 @@ describe("SvgButton component", function() {
     // mount the component
     cy.mount(
       ((
-        <SvgButton
-          data-cy="SvgButton"
-          aria-label="HamburgerButton"
-          height={svgSize}
-          width={svgSize}
-          svg={<HamburgerIcon size="100%" data-cy="SvgElement" />}
-        />
+        <ThemeProvider theme={lightTheme}>
+          <SvgButton
+            data-cy="SvgButton"
+            aria-label="HamburgerButton"
+            height={svgSize}
+            width={svgSize}
+            svg={<HamburgerIcon size="100%" data-cy="SvgElement" />}
+          />
+        </ThemeProvider>
       ) as unknown) as Symbol
     );
   });

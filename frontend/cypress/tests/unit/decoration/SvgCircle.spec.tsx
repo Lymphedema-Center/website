@@ -34,12 +34,14 @@ describe("SvgCircle component", function() {
       // mount the component
       cy.mount(
         ((
-          <SvgCircle
-            data-cy="SvgCircle"
-            size={size}
-            color={color}
-            svg={<LightbulbIcon data-cy="SvgElement" size="60%" />}
-          />
+          <ThemeProvider theme={lightTheme}>
+            <SvgCircle
+              data-cy="SvgCircle"
+              size={size}
+              color={color}
+              svg={<LightbulbIcon data-cy="SvgElement" size="60%" />}
+            />
+          </ThemeProvider>
         ) as unknown) as Symbol
       );
     });
