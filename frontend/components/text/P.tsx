@@ -4,6 +4,7 @@ const P = styled.p`
   font-weight: 400;
   font-size: 1.4em;
   color: ${props => props.theme.colors.text.normal};
+  margin: 0;
 `;
 
 export default P;
