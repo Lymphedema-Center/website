@@ -3,7 +3,7 @@ import { filterProps } from "../../helpers";
 
 interface ResetIconProps extends React.SVGAttributes<SVGSVGElement> {
   /** Should be size in pixels or percent, `"100px"` or `"25%"`. */
-  size?: string;
+  size: string;
   /** Should be any css compliant color string, `#434343"`. */
   color?: string;
 }
@@ -12,8 +12,8 @@ const ResetIcon = (props: ResetIconProps) => (
   <svg
     viewBox="0 0 24 24"
     fill={props.color ? props.color : "#434343"}
-    height={props.size ? props.size : null}
-    width={props.size ? props.size : null}
+    height={props.size}
+    width={props.size}
     xmlns="http://www.w3.org/2000/svg"
     {...filterProps(props, ["color", "size"])}
   >
