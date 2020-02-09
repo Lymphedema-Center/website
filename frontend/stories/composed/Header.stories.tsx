@@ -1,5 +1,6 @@
 import React from "react";
 import { withA11y } from "@storybook/addon-a11y";
+import { action } from "@storybook/addon-actions";
 import Header from "../../components/composed/Header";
 
 export default {
@@ -12,5 +13,5 @@ export default {
 };
 
 export const normal = () => {
-  return <Header hamburgerOnClick={() => {}} />;
+  return <Header hamburgerOnClick={action("button-click")} />;
 };
