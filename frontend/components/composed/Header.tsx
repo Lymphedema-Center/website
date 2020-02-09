@@ -1,5 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
+import SvgButton from "../button/SvgButton";
 import HamburgerIcon from "../svg/icon/HamburgerIcon";
 import LymphedemaCenterLogo from "../svg/brand/LymphedemaCenterLogo";
 
@@ -13,33 +15,38 @@ const Container = styled.header`
   align-items: center;
 `;
 
-const HamburgerButton = styled.button`
-  border: none;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  height: 34px;
-  width: 34px;
-`;
-
-const InvisHamburgerButton = styled(HamburgerButton)`
+const InvisSvgButton = styled(SvgButton)`
   visibility: hidden;
 `;
 
+const LogoLink = styled.a`
+  height: 34px;
+  cursor: pointer;
+  justify-self: center;
+`;
 const ELymphedemaCenterLogo = styled(LymphedemaCenterLogo)`
   justify-self: center;
 `;
 
 const Header = (props: React.HTMLAttributes<HTMLDivElement>) => (
   <Container {...props}>
-    <HamburgerButton aria-label="HamburgerButton">
-      <HamburgerIcon size="34px" />
-    </HamburgerButton>
-    <ELymphedemaCenterLogo height="34px" />
-    <InvisHamburgerButton>
-      <HamburgerIcon size="34px" />
-    </InvisHamburgerButton>
+    <SvgButton
+      height="34px"
+      width="34px"
+      svg={<HamburgerIcon size="100%" />}
+      aria-label="HamburgerButton"
+    />
+    <Link href="/" passHref>
+      <LogoLink>
+        <ELymphedemaCenterLogo height="34px" />
+      </LogoLink>
+    </Link>
+    <InvisSvgButton
+      height="34px"
+      width="34px"
+      svg={<HamburgerIcon size="100%" />}
+      aria-label="HamburgerButton"
+    />
   </Container>
 );
 

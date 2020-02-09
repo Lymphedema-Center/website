@@ -6,6 +6,7 @@ import lightTheme from "../components/styled/lightTheme";
 // load css
 import "../node_modules/normalize.css/normalize.css";
 import "./global.css";
+import "./mockNextRouter";
 
 addDecorator(storyFn => (
   <ThemeProvider theme={lightTheme}>{storyFn()}</ThemeProvider>
