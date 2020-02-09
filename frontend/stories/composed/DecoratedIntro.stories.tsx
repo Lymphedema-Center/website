@@ -24,9 +24,10 @@ export const normal = () => {
               svg={<LightbulbIcon size="60%" />}
               color={value.colors.fill.brand.skin}
               header="What is the Lymphedema Center?"
-              description={`
-                The Lymphedema Center is a resource to educate and help
-                people manage Lymphedema with four main focuses.`}
+              description={
+                "The Lymphedema Center is a resource to educate and help" +
+                " people manage Lymphedema with four main focuses."
+              }
             />
           );
         }}

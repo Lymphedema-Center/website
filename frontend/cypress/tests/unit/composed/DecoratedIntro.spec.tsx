@@ -4,8 +4,13 @@ import { ThemeProvider, ThemeConsumer } from "styled-components";
 import lightTheme from "../../../../components/styled/lightTheme";
 import LightbulbIcon from "../../../../components/svg/icon/LightbulbIcon";
 
-describe("Footer component", function() {
-  it("works", function() {
+describe("DecoratedIntro component", function() {
+  const header = "What is the Lymphedema Center?";
+  const description =
+    "The Lymphedema Center is a resource to educate" +
+    " and help people manage Lymphedema with four main focuses.";
+
+  before(function() {
     // mount
     cy.mount(
       ((
@@ -14,12 +19,11 @@ describe("Footer component", function() {
             {value => {
               return (
                 <DecoratedIntro
-                  svg={<LightbulbIcon size="60%" />}
+                  data-cy="DecoratedIntro"
+                  svg={<LightbulbIcon data-cy="SvgElement" size="60%" />}
                   color={value.colors.fill.brand.skin}
-                  header="What is the Lymphedema Center?"
-                  description={`
-                    The Lymphedema Center is a resource to educate and help
-                    people manage Lymphedema with four main focuses.`}
+                  header={header}
+                  description={description}
                 />
               );
             }}
@@ -27,5 +31,14 @@ describe("Footer component", function() {
         </ThemeProvider>
       ) as unknown) as Symbol
     );
+  });
+
+  it("works", function() {
+    cy.get("[data-cy=DecoratedIntro]").should(
+      "have.descendants",
+      "[data-cy=SvgElement]"
+    );
+    cy.contains(header);
+    cy.contains(description);
   });
 });
