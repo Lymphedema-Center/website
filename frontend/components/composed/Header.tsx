@@ -28,16 +28,22 @@ const ELymphedemaCenterLogo = styled(LymphedemaCenterLogo)`
   justify-self: center;
 `;
 
-const Header = (props: React.HTMLAttributes<HTMLDivElement>) => (
+interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** The function for the hamburger button. */
+  hamburgerOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Header = (props: HeaderProps) => (
   <Container {...props}>
     <SvgButton
       height="34px"
       width="34px"
       svg={<HamburgerIcon size="100%" />}
-      aria-label="HamburgerButton"
+      aria-label="Open up the application drawer."
+      onClick={props.hamburgerOnClick}
     />
     <Link href="/" passHref>
-      <LogoLink>
+      <LogoLink aria-label="Go to the homepage.">
         <ELymphedemaCenterLogo height="34px" />
       </LogoLink>
     </Link>
