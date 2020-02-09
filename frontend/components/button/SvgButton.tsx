@@ -21,6 +21,9 @@ interface SvgButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   svg: React.ReactNode;
 }
 
+/**
+ * - Also accepts all `React.HTMLAttributes<HTMLButtonElement>` props.
+ */
 const SvgButton = (props: SvgButtonProps) => (
   <Container
     height={props.height}

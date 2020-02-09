@@ -1,6 +1,7 @@
 import React from "react";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs, number } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 import SvgButton from "../../components/button/SvgButton";
 import HamburgerIcon from "../../components/svg/icon/HamburgerIcon";
 
@@ -30,6 +31,7 @@ export const normal = () => {
       height={`${height}px`}
       width={`${width}px`}
       svg={<HamburgerIcon size="100%" />}
+      onClick={action("button-click")}
     />
   );
 };
