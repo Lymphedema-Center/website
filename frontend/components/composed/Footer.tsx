@@ -11,6 +11,7 @@ const Container = styled.footer`
   justify-items: center;
 `;
 
+/** - Also accepts all `React.HTMLAttributes<HTMLDivElement>` props. */
 const Footer = (props: React.HTMLAttributes<HTMLDivElement>) => (
   <Container {...props}>
     <TheUofILogo />

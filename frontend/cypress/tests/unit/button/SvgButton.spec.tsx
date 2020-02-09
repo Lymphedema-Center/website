@@ -28,14 +28,13 @@ describe("SvgButton component", function() {
     );
   });
 
-  describe("props", function() {
-    // there is an error in either styled-components || cypress
-    it.skip("width works", function() {
+  // there is an error in either styled-components || cypress
+  describe.skip("props", function() {
+    it("width works", function() {
       cy.get("[data-cy=SvgButton]").should("have.css", "width", svgSize);
     });
 
-    // there is an error in either styled-components || cypress
-    it.skip("height works", function() {
+    it("height works", function() {
       cy.get("[data-cy=SvgButton]").should("have.css", "height", svgSize);
     });
   });

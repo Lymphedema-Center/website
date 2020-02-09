@@ -33,6 +33,7 @@ interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   hamburgerOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+/** - Also accepts all `React.HTMLAttributes<HTMLDivElement>` props. */
 const Header = (props: HeaderProps) => (
   <Container {...props}>
     <SvgButton
