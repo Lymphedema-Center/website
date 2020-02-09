@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import Router from "next/router";
 
 const actionWithPromise = () => new Promise(resolve => resolve());
