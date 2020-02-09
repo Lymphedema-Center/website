@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../../../components/composed/Header";
 import { ThemeProvider } from "styled-components";
 import lightTheme from "../../../../components/styled/lightTheme";
+import "../../../mockNextRouter";
 
 describe("Header component", function() {
   it("hamburgerOnClick maps to hamburger button", function() {
@@ -23,6 +24,9 @@ describe("Header component", function() {
         </ThemeProvider>
       ) as unknown) as Symbol
     );
+
+    // click on the hamburger
+    cy.get("[data-cy=HamburgerButton]").click();
 
     // test spy
     cy.get("@foo").should("have.been.called");

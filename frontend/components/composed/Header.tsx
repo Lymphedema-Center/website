@@ -41,6 +41,7 @@ const Header = (props: HeaderProps) => (
       svg={<HamburgerIcon size="100%" />}
       aria-label="Open up the application drawer."
       onClick={props.hamburgerOnClick}
+      data-cy="HamburgerButton"
     />
     <Link href="/" passHref>
       <LogoLink aria-label="Go to the homepage.">
