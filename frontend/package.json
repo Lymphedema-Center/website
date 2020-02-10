@@ -9,7 +9,7 @@
     "start": "next start",
     "cypress:open": "cypress open",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o .deliverables/storybook"
   },
   "author": "Spencer Duball <spencer-duball@uiowa.edu>",
   "license": "ISC",
