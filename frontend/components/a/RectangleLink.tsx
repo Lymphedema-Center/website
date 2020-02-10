@@ -11,6 +11,7 @@ const Container = styled.a`
   color: ${props => props.theme.colors.text.normal};
   margin: 0;
   cursor: pointer;
+  text-decoration: none;
 
   &:active {
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
