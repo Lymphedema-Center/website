@@ -9,6 +9,7 @@ declare module "styled-components" {
       maxWidth: string;
       small: {
         breakpoint: string;
+        margin: string;
       };
     };
     colors: {

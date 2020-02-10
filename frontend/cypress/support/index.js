@@ -24,3 +24,6 @@ import "@cypress/code-coverage/support";
 
 // import react-unit-test commands
 import "cypress-react-unit-test";
+
+// import global css
+import "./global.css";

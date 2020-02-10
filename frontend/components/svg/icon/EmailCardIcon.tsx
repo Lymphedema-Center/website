@@ -1,11 +1,21 @@
 import React from "react";
+import { filterProps } from "../../helpers";
 
-const EmailCardIcon = (props: React.SVGAttributes<SVGSVGElement>) => (
+interface EmailCardIconProps extends React.SVGAttributes<SVGSVGElement> {
+  /** Should be size in pixels or percent, `"100px"` or `"25%"`. */
+  size: string;
+  /** Should be any css compliant color string, `#434343"`. */
+  color?: string;
+}
+
+const EmailCardIcon = (props: EmailCardIconProps) => (
   <svg
     viewBox="0 0 24 24"
-    fill="#434343"
+    fill={props.color ? props.color : "#434343"}
+    height={props.size}
+    width={props.size}
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
+    {...filterProps(props, ["color", "size"])}
   >
     <path
       fillRule="evenodd"

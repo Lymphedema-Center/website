@@ -1,10 +1,12 @@
+const path = require("path");
+
 module.exports = {
   mode: "development",
   // make sure the source maps work
   devtool: "eval-source-map",
   // webpack will transpile TS and JS files
   resolve: {
-    extensions: [".tsx", ".js"]
+    extensions: [".tsx", ".js", ".css"]
   },
   module: {
     rules: [
@@ -17,7 +19,21 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["next/babel"]
+              presets: ["next/babel"],
+              plugins: [["babel-plugin-styled-components", { ssr: false }]]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true
             }
           }
         ]
