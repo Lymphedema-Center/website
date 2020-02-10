@@ -1,5 +1,5 @@
-# Will this just work?
+# Follow the links below to see the deliverables for each sprint.
 
-This is just para text
+## Sprint 1 Deliverables
 
-[Sprint 1](/deliverables/sprint-1/file.html)
+[Sprint 1](/deliverables/sprint-1/info.html)
