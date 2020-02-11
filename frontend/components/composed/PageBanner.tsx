@@ -36,6 +36,11 @@ const ESvgCircle = styled(SvgCircle)`
 const EH1 = styled(H1)`
   font-weight: 500;
   font-size: 1.6em;
+
+  @media (min-width: ${props => props.theme.layout.tablet.breakpoint}) {
+    font-weight: 600;
+    font-size: 2em;
+  }
 `;
 
 interface PageBanner extends React.HTMLAttributes<HTMLDivElement> {
