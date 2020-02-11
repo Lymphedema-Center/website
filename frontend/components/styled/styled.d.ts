@@ -11,6 +11,10 @@ declare module "styled-components" {
         breakpoint: string;
         margin: string;
       };
+      tablet: {
+        breakpoint: string;
+        margin: string;
+      };
     };
     colors: {
       fill: {
