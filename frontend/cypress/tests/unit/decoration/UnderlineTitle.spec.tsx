@@ -43,7 +43,7 @@ describe("WaveTransition component", function() {
     });
 
     // there is an error with Cypress here
-    it.skip("color works", function() {
+    it("color works", function() {
       cy.get("[data-cy=UnderlineTitle] > div").should(
         "have.css",
         "background-color",

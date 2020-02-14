@@ -29,7 +29,7 @@ describe("SvgCircle component", function() {
   });
 
   // there is an error in either styled-components || cypress
-  describe.skip("props", function() {
+  describe("props", function() {
     before(function() {
       // mount the component
       cy.mount(
