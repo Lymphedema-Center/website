@@ -33,7 +33,7 @@ describe("SvgButton component", function() {
   });
 
   // there is an error in either styled-components || cypress
-  describe.skip("props", function() {
+  describe("props", function() {
     it("width works", function() {
       cy.get("[data-cy=SvgButton]").should("have.css", "width", svgSize);
     });

@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "cypress:open": "cypress open",
+    "cypress:run": "cypress run --headless",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -c .storybook -o .static-storybook"
   },

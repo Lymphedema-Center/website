@@ -4,7 +4,11 @@ const lightTheme: DefaultTheme = {
   layout: {
     maxWidth: "1400px",
     small: {
-      breakpoint: "320px",
+      breakpoint: "340px",
+      margin: "10px"
+    },
+    tablet: {
+      breakpoint: "580px",
       margin: "10px"
     }
   },

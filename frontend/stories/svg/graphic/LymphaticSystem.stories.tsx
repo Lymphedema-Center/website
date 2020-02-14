@@ -1,14 +1,14 @@
 import React from "react";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs, number, radios } from "@storybook/addon-knobs";
-import LymphedemaCenter from "../../../components/svg/brand/LymphedemaCenterLogo";
+import LymphaticSystem from "../../../components/svg/graphic/LymphaticSystem";
 
 export default {
-  title: "svg/brand/LymphedemaCenterLogo",
+  title: "svg/graphic/LymphaticSystem",
   parameters: {
-    componentSubtitle: "The logo for lymphedema-center.com"
+    componentSubtitle: "A grpahic representing a damaged lymphatic system."
   },
-  component: LymphedemaCenter,
+  component: LymphaticSystem,
   decorators: [withA11y, withKnobs]
 };
 
@@ -42,6 +42,6 @@ export const normal = () => {
       : { width: width + "px" };
 
   // display the logo
-  return <LymphedemaCenter {...usedProps} />;
+  return <LymphaticSystem {...usedProps} />;
 };
-export const HeightFromPixels = () => <LymphedemaCenter height="100px" />;
+export const HeightFromPixels = () => <LymphaticSystem height="100px" />;
