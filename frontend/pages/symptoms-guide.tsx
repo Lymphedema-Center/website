@@ -7,6 +7,8 @@ import UnderlineTitle from "../components/decoration/UnderlineTitle";
 import P from "../components/text/P";
 import LymphedemaLeg from "../components/svg/graphic/LymphedemaLeg";
 import LymphaticSystem from "../components/svg/graphic/LymphaticSystem";
+import H2 from "../components/text/H2";
+import RoundedLink from "../components/a/RoundedLink";
 
 const Container = styled.div``;
 
@@ -19,6 +21,12 @@ const ContentContainer = styled.div`
   justify-items: center;
   max-width: 800px;
   gap: 10px;
+`;
+const UnorderedList = styled.ul`
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 `;
 
 // Lymphedema Section
@@ -37,13 +45,33 @@ const CausesMWC = styled(MWC)`
   justify-items: center;
   gap: 30px;
 `;
-const FlatModal = styled.div`
+const WhiteBox = styled.div`
   width: 100%;
   max-width: 800px;
   height: 350px;
   background-color: ${props => props.theme.colors.fill.grayscale.c100};
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+`;
+const WhiteBoxContent = styled.div`
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+`;
+const WhiteBoxIntro = styled.div`
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+`;
+const WhiteBoxP = styled(P)`
+  text-align: center;
+  max-width: 500px;
+`;
+const PrimaryLymphedemaLinksList = styled(UnorderedList)`
+  justify-items: center;
 `;
 
 const SymptomsGuide = () => {
@@ -98,8 +126,34 @@ const SymptomsGuide = () => {
             lymphedema.
           </CenteredP>
         </ContentContainer>
-        <FlatModal></FlatModal>
-        <FlatModal></FlatModal>
+        <WhiteBox>
+          <WhiteBoxContent>
+            <WhiteBoxIntro>
+              <H2>Primary Lymphedema</H2>
+              <WhiteBoxP>
+                Primary lymphedema is a rare condition caused by problems
+                associated with the development of lymph vessels in the body.
+              </WhiteBoxP>
+            </WhiteBoxIntro>
+            <PrimaryLymphedemaLinksList>
+              <RoundedLink>Milroy's disease</RoundedLink>
+              <RoundedLink>Late-onset lymphedema</RoundedLink>
+              <RoundedLink>Miege's disease</RoundedLink>
+            </PrimaryLymphedemaLinksList>
+          </WhiteBoxContent>
+        </WhiteBox>
+        <WhiteBox>
+          <WhiteBoxContent>
+            <WhiteBoxIntro>
+              <H2>Secondary Lymphedema</H2>
+              <WhiteBoxP>
+                Secondary lymphedema is far more common than primary lymphedema.
+                Secondary lymphedema is caused by a procedure that damages the
+                lymph nodes or lymph vessels. Such as:
+              </WhiteBoxP>
+            </WhiteBoxIntro>
+          </WhiteBoxContent>
+        </WhiteBox>
       </CausesMWC>
     </Container>
   );
