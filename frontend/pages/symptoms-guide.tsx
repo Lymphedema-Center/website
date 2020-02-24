@@ -9,6 +9,7 @@ import LymphedemaLeg from "../components/svg/graphic/LymphedemaLeg";
 import LymphaticSystem from "../components/svg/graphic/LymphaticSystem";
 import H2 from "../components/text/H2";
 import RoundedLink from "../components/a/RoundedLink";
+import BulletListItem from "../components/li/BulletListItem";
 
 const Container = styled.div``;
 
@@ -34,7 +35,7 @@ const LymphedemaMWC = styled(MWC)`
   padding: 60px 0;
   display: grid;
   justify-items: center;
-  gap: 30px;
+  row-gap: 30px;
 `;
 
 // Causes Section
@@ -43,7 +44,7 @@ const CausesMWC = styled(MWC)`
   padding: 60px 0;
   display: grid;
   justify-items: center;
-  gap: 30px;
+  row-gap: 30px;
 `;
 const WhiteBox = styled.div`
   width: 100%;
@@ -55,6 +56,7 @@ const WhiteBox = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
+  padding: 0 10px;
 `;
 const WhiteBoxContent = styled.div`
   display: grid;
@@ -72,6 +74,20 @@ const WhiteBoxP = styled(P)`
 `;
 const PrimaryLymphedemaLinksList = styled(UnorderedList)`
   justify-items: center;
+`;
+const SecondaryLymphedemaCausesList = styled(UnorderedList)`
+  justify-items: start;
+`;
+
+// Symptoms Section
+const SymptomsMWC = styled(MWC)`
+  padding: 60px 0;
+  display: grid;
+  justify-items: center;
+  row-gap: 30px;
+`;
+const SymptomsList = styled(UnorderedList)`
+  justify-items: start;
 `;
 
 const SymptomsGuide = () => {
@@ -136,9 +152,15 @@ const SymptomsGuide = () => {
               </WhiteBoxP>
             </WhiteBoxIntro>
             <PrimaryLymphedemaLinksList>
-              <RoundedLink>Milroy's disease</RoundedLink>
-              <RoundedLink>Late-onset lymphedema</RoundedLink>
-              <RoundedLink>Miege's disease</RoundedLink>
+              <RoundedLink href="https://ghr.nlm.nih.gov/condition/milroy-disease">
+                Milroy's disease
+              </RoundedLink>
+              <RoundedLink href="https://www.ncbi.nlm.nih.gov/pubmed/662482">
+                Late-onset lymphedema
+              </RoundedLink>
+              <RoundedLink href="https://ghr.nlm.nih.gov/condition/miege-disease">
+                Miege's disease
+              </RoundedLink>
             </PrimaryLymphedemaLinksList>
           </WhiteBoxContent>
         </WhiteBox>
@@ -152,9 +174,42 @@ const SymptomsGuide = () => {
                 lymph nodes or lymph vessels. Such as:
               </WhiteBoxP>
             </WhiteBoxIntro>
+            <SecondaryLymphedemaCausesList>
+              <BulletListItem message="Surgery" />
+              <BulletListItem message="Radiation treatment" />
+              <BulletListItem message="Cancer" />
+              <BulletListItem message="Infection" />
+            </SecondaryLymphedemaCausesList>
           </WhiteBoxContent>
         </WhiteBox>
       </CausesMWC>
+      <SymptomsMWC>
+        <ContentContainer>
+          <UnderlineTitle
+            color={theme.colors.fill.brand.green}
+            message="Symptoms"
+          />
+          <CenteredP>
+            The signs and symptoms of lymphedema occuring in the affected arm or
+            leg are:
+          </CenteredP>
+        </ContentContainer>
+        <SymptomsList>
+          <BulletListItem message="Swelling in arm or leg" />
+          <BulletListItem message="Restricted range of motion" />
+          <BulletListItem message="Aching or discomfort" />
+          <BulletListItem message="Hardening and thickening of the skin" />
+        </SymptomsList>
+        <ContentContainer>
+          <CenteredP>
+            The swelling caused by lymphedema can range from slightly noticable
+            to a condition severe enough that use of the limb is restricted.
+            Lymphedema caused by cancer may not occur for months or even years
+            after treatement so it is important to frequently check for
+            symptoms.
+          </CenteredP>
+        </ContentContainer>
+      </SymptomsMWC>
     </Container>
   );
 };

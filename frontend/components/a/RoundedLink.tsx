@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Container = styled.a`
+const RoundedLink = styled.a`
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -25,9 +24,5 @@ const Container = styled.a`
     }
   }
 `;
-
-const RoundedLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => (
-  <Container {...props}>{props.children}</Container>
-);
 
 export default RoundedLink;
