@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Container = styled.a`
+const RectangleLink = styled.a`
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
@@ -23,9 +22,5 @@ const Container = styled.a`
     }
   }
 `;
-
-const RectangleLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => (
-  <Container {...props}>{props.children}</Container>
-);
 
 export default RectangleLink;
