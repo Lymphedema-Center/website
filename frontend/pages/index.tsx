@@ -106,7 +106,11 @@ const HomePage = () => {
             }
           />
           <Link href="/symptoms-guide" passHref>
-            <SpacedRectangleLink>View the Symptoms Guide</SpacedRectangleLink>
+            <SpacedRectangleLink
+              onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
+            >
+              View the Symptoms Guide
+            </SpacedRectangleLink>
           </Link>
         </SymptomsGuideSection>
       </SymptomsGuideMWC>
@@ -123,7 +127,9 @@ const HomePage = () => {
             }
           />
           <Link href="/preventative-measures" passHref>
-            <SpacedRectangleLink>
+            <SpacedRectangleLink
+              onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
+            >
               View the Preventative Measures
             </SpacedRectangleLink>
           </Link>
@@ -141,7 +147,11 @@ const HomePage = () => {
             }
           />
           <Link href="/forums" passHref>
-            <SpacedRectangleLink>View the Community Forums</SpacedRectangleLink>
+            <SpacedRectangleLink
+              onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
+            >
+              View the Community Forums
+            </SpacedRectangleLink>
           </Link>
         </CommunityForumsSection>
       </CommunityForumsMWC>
@@ -158,7 +168,11 @@ const HomePage = () => {
             }
           />
           <Link href="/log" passHref>
-            <SpacedRectangleLink>View my Treatment Log</SpacedRectangleLink>
+            <SpacedRectangleLink
+              onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
+            >
+              View my Treatment Log
+            </SpacedRectangleLink>
           </Link>
         </PersonalLogSection>
       </PersonalLogMWC>

@@ -45,7 +45,10 @@ const Header = (props: HeaderProps) => (
       data-cy="HamburgerButton"
     />
     <Link href="/" passHref>
-      <LogoLink aria-label="Go to the homepage.">
+      <LogoLink
+        aria-label="Go to the homepage."
+        onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
+      >
         <ELymphedemaCenterLogo height="34px" />
       </LogoLink>
     </Link>

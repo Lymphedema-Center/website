@@ -1,4 +1,10 @@
-import { filterProps, computeAspectRatio } from "../../../components/helpers";
+import React from "react";
+import styled from "styled-components";
+import {
+  filterProps,
+  computeAspectRatio,
+  scrollToTop
+} from "../../../components/helpers";
 
 describe("filterProps helper", function() {
   const goodProps = {
