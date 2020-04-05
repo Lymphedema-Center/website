@@ -4,7 +4,6 @@ import styled from "styled-components";
 import SvgButton from "../button/SvgButton";
 import HamburgerIcon from "../svg/icon/HamburgerIcon";
 import LymphedemaCenterLogo from "../svg/brand/LymphedemaCenterLogo";
-import { scrollToTop } from "../helpers";
 
 const Container = styled.header`
   background-color: ${(props) => props.theme.colors.fill.grayscale.c600};
@@ -48,7 +47,7 @@ const Header = (props: HeaderProps) => (
       data-cy="HamburgerButton"
     />
     <Link href="/" passHref>
-      <LogoLink aria-label="Go to the homepage." onClick={scrollToTop}>
+      <LogoLink aria-label="Go to the homepage.">
         <ELymphedemaCenterLogo height="34px" />
       </LogoLink>
     </Link>
