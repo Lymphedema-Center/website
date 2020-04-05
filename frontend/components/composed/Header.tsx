@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SvgButton from "../button/SvgButton";
 import HamburgerIcon from "../svg/icon/HamburgerIcon";
 import LymphedemaCenterLogo from "../svg/brand/LymphedemaCenterLogo";
+import { scrollToTop } from "../helpers";
 
 const Container = styled.header`
   background-color: ${(props) => props.theme.colors.fill.grayscale.c600};
@@ -19,7 +20,9 @@ const InvisSvgButton = styled(SvgButton)`
   visibility: hidden;
 `;
 
-const LogoLink = styled.a`
+const LogoLink = styled.a.attrs({
+  "data-cy": "LogoLink",
+})`
   height: 34px;
   cursor: pointer;
   justify-self: center;
@@ -45,10 +48,7 @@ const Header = (props: HeaderProps) => (
       data-cy="HamburgerButton"
     />
     <Link href="/" passHref>
-      <LogoLink
-        aria-label="Go to the homepage."
-        onClick={() => document.getElementById("__next")!.scrollTo(0, 0)}
-      >
+      <LogoLink aria-label="Go to the homepage." onClick={scrollToTop}>
         <ELymphedemaCenterLogo height="34px" />
       </LogoLink>
     </Link>

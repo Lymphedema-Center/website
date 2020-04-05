@@ -40,3 +40,12 @@ export const computeAspectRatio = (dimension: string, ratio: number) => {
     );
   }
 };
+
+/**
+ * Scrolls to the top of next container page.
+ */
+export const scrollToTop = () => {
+  if (document) {
+    document.getElementById("__next")!.scrollTo(0, 0);
+  }
+};
