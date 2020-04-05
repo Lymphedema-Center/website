@@ -29,7 +29,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={lightTheme}>
-        <FixedHeader hamburgerOnClick={() => {}} />
+        <FixedHeader hamburgerOnClick={() => {}} data-cy="FixedHeader" />
         <PageContainer>
           <InvisHeader hamburgerOnClick={() => {}} />
           <Component {...pageProps} />

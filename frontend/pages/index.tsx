@@ -12,6 +12,7 @@ import Link from "next/link";
 import ShieldIcon from "../components/svg/icon/ShieldIcon";
 import DialogIcon from "../components/svg/icon/DialogIcon";
 import NotebookIcon from "../components/svg/icon/NotebookIcon";
+import { scrollToTop } from "../components/helpers";
 
 const Container = styled.div``;
 
@@ -44,28 +45,28 @@ const OrderedList = styled.ol`
 // Symptoms Guide
 /////////////////////////////////////////////////////////////////////
 const SymptomsGuideMWC = styled(MWC)`
-  background-color: ${props => props.theme.colors.fill.brand.green};
+  background-color: ${(props) => props.theme.colors.fill.brand.green};
 `;
 const SymptomsGuideSection = styled(Section)``;
 
 // Preventative Measures
 /////////////////////////////////////////////////////////////////////
 const PreventativeMeasuresMWC = styled(MWC)`
-  background-color: ${props => props.theme.colors.fill.brand.yellow};
+  background-color: ${(props) => props.theme.colors.fill.brand.yellow};
 `;
 const PreventativeMeasuresSection = styled(Section)``;
 
 // Community Forums
 /////////////////////////////////////////////////////////////////////
 const CommunityForumsMWC = styled(MWC)`
-  background-color: ${props => props.theme.colors.fill.brand.pink};
+  background-color: ${(props) => props.theme.colors.fill.brand.pink};
 `;
 const CommunityForumsSection = styled(Section)``;
 
 // Personal Treatment Log
 /////////////////////////////////////////////////////////////////////
 const PersonalLogMWC = styled(MWC)`
-  background-color: ${props => props.theme.colors.fill.brand.salmon};
+  background-color: ${(props) => props.theme.colors.fill.brand.salmon};
 `;
 const PersonalLogSection = styled(Section)``;
 
@@ -106,7 +107,9 @@ const HomePage = () => {
             }
           />
           <Link href="/symptoms-guide" passHref>
-            <SpacedRectangleLink>View the Symptoms Guide</SpacedRectangleLink>
+            <SpacedRectangleLink onClick={scrollToTop}>
+              View the Symptoms Guide
+            </SpacedRectangleLink>
           </Link>
         </SymptomsGuideSection>
       </SymptomsGuideMWC>
@@ -123,7 +126,7 @@ const HomePage = () => {
             }
           />
           <Link href="/preventative-measures" passHref>
-            <SpacedRectangleLink>
+            <SpacedRectangleLink onClick={scrollToTop}>
               View the Preventative Measures
             </SpacedRectangleLink>
           </Link>
@@ -141,7 +144,9 @@ const HomePage = () => {
             }
           />
           <Link href="/forums" passHref>
-            <SpacedRectangleLink>View the Community Forums</SpacedRectangleLink>
+            <SpacedRectangleLink onClick={scrollToTop}>
+              View the Community Forums
+            </SpacedRectangleLink>
           </Link>
         </CommunityForumsSection>
       </CommunityForumsMWC>
@@ -158,7 +163,9 @@ const HomePage = () => {
             }
           />
           <Link href="/log" passHref>
-            <SpacedRectangleLink>View my Treatment Log</SpacedRectangleLink>
+            <SpacedRectangleLink onClick={scrollToTop}>
+              View my Treatment Log
+            </SpacedRectangleLink>
           </Link>
         </PersonalLogSection>
       </PersonalLogMWC>
