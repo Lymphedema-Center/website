@@ -49,3 +49,11 @@ export const scrollToTop = () => {
     document.getElementById("__next")!.scrollTo(0, 0);
   }
 };
+
+/**
+ * Returns true if any of the values in a boolean array are true.
+ *
+ * @param arr The array of boolean values.
+ * @returns A boolean.
+ */
+export const any = (arr: boolean[]) => arr.some((element) => element === true);
