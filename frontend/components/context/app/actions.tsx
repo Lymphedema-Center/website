@@ -1,4 +1,6 @@
-export enum Action {}
+export enum Action {
+  ToggleDrawer = "TOGGLE_DRAWER",
+}
 
 export interface IAction {
   type: Action;
@@ -6,3 +8,11 @@ export interface IAction {
     [key: string]: any;
   };
 }
+
+// drawer actions
+export const toggleDrawer: () => IAction = () => {
+  return {
+    type: Action.ToggleDrawer,
+    payload: {},
+  };
+};

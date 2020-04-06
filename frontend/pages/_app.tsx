@@ -5,7 +5,11 @@ import Header from "../components/composed/Header";
 import Footer from "../components/composed/Footer";
 import { ThemeProvider } from "styled-components";
 import lightTheme from "../components/styled/lightTheme";
-import { ContextProvider as AppContextProvider } from "../components/context/app/context";
+import {
+  ContextProvider as AppContextProvider,
+  Context as AppContext,
+} from "../components/context/app/context";
+import { toggleDrawer } from "../components/context/app/actions";
 
 // load global stylesheets
 import "../node_modules/normalize.css/normalize.css";
@@ -31,12 +35,23 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={lightTheme}>
         <AppContextProvider>
-          <FixedHeader hamburgerOnClick={() => {}} data-cy="FixedHeader" />
-          <PageContainer>
-            <InvisHeader hamburgerOnClick={() => {}} />
-            <Component {...pageProps} />
-          </PageContainer>
-          <Footer />
+          <AppContext.Consumer>
+            {(value) => (
+              <>
+                <FixedHeader
+                  hamburgerOnClick={() => {
+                    value.dispatch(toggleDrawer());
+                  }}
+                  data-cy="FixedHeader"
+                />
+                <PageContainer>
+                  <InvisHeader hamburgerOnClick={() => {}} />
+                  <Component {...pageProps} />
+                </PageContainer>
+                <Footer />
+              </>
+            )}
+          </AppContext.Consumer>
         </AppContextProvider>
       </ThemeProvider>
     );

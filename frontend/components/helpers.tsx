@@ -40,3 +40,11 @@ export const computeAspectRatio = (dimension: string, ratio: number) => {
     );
   }
 };
+
+/**
+ * Returns true if any of the values in a boolean array are true.
+ *
+ * @param arr The array of boolean values.
+ * @returns A boolean.
+ */
+export const any = (arr: boolean[]) => arr.some((element) => element === true);
