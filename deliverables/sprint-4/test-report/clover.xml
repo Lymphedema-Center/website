@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1586195307863" clover="3.2.0">
+  <project timestamp="1586195307863" name="All files">
+    <metrics statements="231" coveredstatements="225" conditionals="128" coveredconditionals="125" methods="107" coveredmethods="100" elements="466" coveredelements="450" complexity="0" loc="231" ncloc="231" packages="14" files="71" classes="71"/>
+    <package name="components">
+      <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="4"/>
+      <file name="helpers.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/helpers.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="4"/>
+        <line num="7" count="171" type="stmt"/>
+        <line num="9" count="534" type="stmt"/>
+        <line num="12" count="534" type="stmt"/>
+        <line num="13" count="1359" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="516" type="stmt"/>
+        <line num="19" count="534" type="stmt"/>
+        <line num="29" count="171" type="stmt"/>
+        <line num="31" count="54" type="stmt"/>
+        <line num="34" count="54" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="45" type="stmt"/>
+        <line num="36" count="45" type="stmt"/>
+        <line num="38" count="9" type="stmt"/>
+        <line num="47" count="171" type="stmt"/>
+        <line num="48" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="49" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.a">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="RectangleLink.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/a/RectangleLink.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="7" count="27" type="stmt"/>
+        <line num="10" count="27" type="stmt"/>
+      </file>
+      <file name="RoundedLink.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/a/RoundedLink.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.button">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="SvgButton.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/button/SvgButton.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="11" count="33" type="stmt"/>
+        <line num="12" count="33" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="28" count="33" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.composed">
+      <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+      <file name="DecoratedIntro.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/composed/DecoratedIntro.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="33" type="stmt"/>
+      </file>
+      <file name="Footer.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/composed/Footer.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/composed/Header.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="15" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="41" count="15" type="stmt"/>
+      </file>
+      <file name="PageBanner.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/composed/PageBanner.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.context.app">
+      <metrics statements="13" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <file name="actions.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/context/app/actions.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="context.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/context/app/context.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+      </file>
+      <file name="reducer.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/context/app/reducer.tsx">
+        <metrics statements="6" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.decoration">
+      <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <file name="SvgCircle.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/decoration/SvgCircle.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="7" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="12" type="stmt"/>
+        <line num="27" count="42" type="stmt"/>
+      </file>
+      <file name="UnderlineTitle.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/decoration/UnderlineTitle.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+      </file>
+      <file name="WaveTransition.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/decoration/WaveTransition.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="6" count="27" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.layout">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="MWC.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/layout/MWC.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="11" count="33" type="stmt"/>
+        <line num="12" count="33" type="stmt"/>
+        <line num="13" count="33" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.li">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="BulletListItem.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/li/BulletListItem.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+      </file>
+      <file name="CircleNumberListItem.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/li/CircleNumberListItem.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="17" count="27" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="26" count="27" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="34" count="27" type="stmt"/>
+        <line num="46" count="6" type="stmt"/>
+        <line num="47" count="27" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.styled">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="lightTheme.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/styled/lightTheme.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="42" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.svg.brand">
+      <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+      <file name="LymphedemaCenterLogo.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/brand/LymphedemaCenterLogo.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="24" type="stmt"/>
+      </file>
+      <file name="TheUofILogo.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/brand/TheUofILogo.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.svg.graphic">
+      <metrics statements="4" coveredstatements="4" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
+      <file name="LymphaticSystem.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/graphic/LymphaticSystem.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+      </file>
+      <file name="LymphedemaLeg.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/graphic/LymphedemaLeg.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.svg.icon">
+      <metrics statements="90" coveredstatements="90" conditionals="90" coveredconditionals="90" methods="45" coveredmethods="45"/>
+      <file name="AvatarIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/AvatarIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="BoldIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/BoldIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CenterAlignIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CenterAlignIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CheckIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CheckIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CloseIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CloseIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CodeIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CodeIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CommentCheckIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CommentCheckIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="CommentIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/CommentIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="DeltaIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/DeltaIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="DialogIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/DialogIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+      </file>
+      <file name="EditIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/EditIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="EllipsisIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/EllipsisIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="EmailCardIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/EmailCardIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="EmailIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/EmailIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ErrorIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ErrorIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="FingerprintIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/FingerprintIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="FirstNameIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/FirstNameIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ForumPostIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ForumPostIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="HamburgerIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/HamburgerIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="12" count="39" type="stmt"/>
+      </file>
+      <file name="Header1Icon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/Header1Icon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="Header2Icon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/Header2Icon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ImageIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ImageIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="InfoIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/InfoIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ItalicIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ItalicIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="LastNameIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/LastNameIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="LightbulbIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/LightbulbIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="24" type="stmt"/>
+      </file>
+      <file name="LogPostIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/LogPostIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="NameCardIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/NameCardIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="NextIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/NextIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="NotebookIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/NotebookIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+      </file>
+      <file name="PasswordCardIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/PasswordCardIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="PreviousIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/PreviousIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ResetIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ResetIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SaveIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SaveIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SearchIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SearchIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SendIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SendIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SettingsIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SettingsIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="ShieldIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/ShieldIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+      </file>
+      <file name="SignInIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SignInIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SignOutIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SignOutIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SignUpIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SignUpIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="SuccessIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/SuccessIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="TargetIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/TargetIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+      </file>
+      <file name="TitleIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/TitleIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="UnderlineIcon.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/svg/icon/UnderlineIcon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.text">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="H1.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/text/H1.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="6" count="42" type="stmt"/>
+      </file>
+      <file name="P.tsx" path="/home/sduball/Documents/school/senior/website/frontend/components/text/P.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="6" count="33" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="7"/>
+      <file name="_app.tsx" path="/home/sduball/Documents/school/senior/website/frontend/pages/_app.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="/home/sduball/Documents/school/senior/website/frontend/pages/index.tsx">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="6" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="6" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="62" count="6" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="69" count="6" type="stmt"/>
+        <line num="71" count="3" type="stmt"/>
+        <line num="73" count="3" type="stmt"/>
+        <line num="74" count="6" type="stmt"/>
+        <line num="76" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
