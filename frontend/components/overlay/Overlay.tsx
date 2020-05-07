@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Context as AppContext } from "../context/app/context";
 import { useTransition, animated, useSpring } from "react-spring";
 import { toggleDrawer } from "../context/app/actions";
-import Drawer from "../composed/Drawer";
+import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
 
 const OverlayView = styled(animated.div)`
@@ -67,13 +67,15 @@ const Overlay = (
     <OverlayView
       {...filterProps(props, ["visible"])}
       style={overlaySpring}
-      onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        appCtx.dispatch(toggleDrawer());
+      onClick={() => {
+        if (appCtx.state.overlay.components.drawer.open) {
+          appCtx.dispatch(toggleDrawer());
+        }
       }}
     >
       {drawerTransition.map(({ item, props }) =>
         item ? (
-          <Drawer
+          <EDrawer
             key="drawerkey"
             onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
               event.stopPropagation()

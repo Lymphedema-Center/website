@@ -13,10 +13,6 @@ const HeaderView = styled.div`
   grid-template-rows: 1fr 1fr;
   column-gap: 6px;
   padding: 15px 10px;
-
-  @media (min-width: ${(props) => props.theme.layout.tablet.breakpoint}) {
-    padding: 20px 10px;
-  }
 `;
 
 // avatar

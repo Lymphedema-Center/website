@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withA11y } from "@storybook/addon-a11y";
-import Drawer from "../../components/composed/Drawer";
+import Drawer from "../../components/overlay/drawer/Drawer";
 
 export default {
   title: "composed/Drawer",
