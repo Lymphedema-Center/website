@@ -1,16 +1,17 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Context as AppContext } from "../context/app/context";
-import { useTransition, animated } from "react-spring";
+import { useTransition, animated, useSpring } from "react-spring";
 import { toggleDrawer } from "../context/app/actions";
 import Drawer from "../composed/Drawer";
+import { filterProps } from "../helpers";
 
-const OverlayView = styled.div`
+const OverlayView = styled(animated.div)`
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 50;
-  background-color: rgba(123, 123, 123, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 const EDrawer = styled(Drawer)`
@@ -23,23 +24,49 @@ const Overlay = (
   props: { visible: boolean } & React.HTMLAttributes<HTMLDivElement>
 ) => {
   const appCtx = useContext(AppContext);
-  const overlayRef = useRef<HTMLDivElement>(null);
   const drawerTransition = useTransition(
     appCtx.state.overlay.components.drawer.open,
     null,
     {
-      from: { transform: "translateX(-100%)" },
-      enter: { transform: "translateX(0%)" },
-      leave: { transform: "translateX(-100%)" },
+      from: {
+        transform: "translateX(-100%)",
+        boxShadow: "2px 0px 4px rgba(0, 0, 0, 0.4)",
+      },
+      enter: {
+        transform: "translateX(0%)",
+
+        boxShadow: "2px 0px 4px rgba(0, 0, 0, 0)",
+      },
+      leave: {
+        transform: "translateX(-100%)",
+
+        boxShadow: "2px 0px 4px rgba(0, 0, 0, 0.4)",
+      },
       config: { tension: 380, clamp: true },
     }
   );
+  const [overlaySpring, setOverlaySpring] = useSpring(() => ({
+    backgroundColor: `rgba(0, 0, 0, ${props.visible ? 0.4 : 0})`,
+    visibility: props.visible
+      ? ("visible" as "visible")
+      : ("hidden" as "hidden"),
+  }));
+  setOverlaySpring({
+    backgroundColor: `rgba(0, 0, 0, ${props.visible ? 0.4 : 0})`,
+    visibility: "visible" as "visible",
+    onRest: () => {
+      setOverlaySpring({
+        visibility: props.visible
+          ? ("visible" as "visible")
+          : ("hidden" as "hidden"),
+      });
+    },
+  });
 
   return (
     <OverlayView
-      {...props}
-      ref={overlayRef}
-      style={{ visibility: props.visible ? "visible" : "hidden" }}
+      {...filterProps(props, ["visible"])}
+      style={overlaySpring}
       onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         appCtx.dispatch(toggleDrawer());
       }}

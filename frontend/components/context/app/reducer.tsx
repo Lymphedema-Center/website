@@ -17,12 +17,7 @@ const reducer = (state: IContextState, action: IAction) => {
         ...state,
         overlay: {
           visible: newVisibility,
-          components: {
-            ...state.overlay.components,
-            drawer: {
-              open: drawerOpen,
-            },
-          },
+          components: newComponents,
         },
       };
 
