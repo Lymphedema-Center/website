@@ -85,14 +85,13 @@ const HomePage = () => {
             header="What is the Lymphedema Center?"
             description={
               "The Lymphedema Center is a resource to educate and help" +
-              " people manage Lymphedema with four main focuses."
+              " people manage Lymphedema with three main focuses."
             }
           />
           <OrderedList>
             <CircleNumberListItem index={1} message="Symptoms Guide" />
             <CircleNumberListItem index={2} message="Preventative Measures" />
-            <CircleNumberListItem index={3} message="Community Forums" />
-            <CircleNumberListItem index={4} message="Personal Treatment Log" />
+            <CircleNumberListItem index={3} message="Personal Treatment Log" />
           </OrderedList>
         </IntroSection>
       </IntroMWC>
