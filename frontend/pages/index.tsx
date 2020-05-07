@@ -56,12 +56,14 @@ const PreventativeMeasuresMWC = styled(MWC)`
 `;
 const PreventativeMeasuresSection = styled(Section)``;
 
+/*
 // Community Forums
 /////////////////////////////////////////////////////////////////////
 const CommunityForumsMWC = styled(MWC)`
   background-color: ${(props) => props.theme.colors.fill.brand.pink};
 `;
 const CommunityForumsSection = styled(Section)``;
+*/
 
 // Personal Treatment Log
 /////////////////////////////////////////////////////////////////////
@@ -132,6 +134,7 @@ const HomePage = () => {
           </Link>
         </PreventativeMeasuresSection>
       </PreventativeMeasuresMWC>
+      {/*
       <WaveTransition url="/background/pink-transition.png" />
       <CommunityForumsMWC>
         <CommunityForumsSection>
@@ -150,6 +153,7 @@ const HomePage = () => {
           </Link>
         </CommunityForumsSection>
       </CommunityForumsMWC>
+      */}
       <WaveTransition url="/background/salmon-transition.png" />
       <PersonalLogMWC>
         <PersonalLogSection>
