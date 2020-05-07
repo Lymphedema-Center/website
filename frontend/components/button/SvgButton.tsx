@@ -8,8 +8,13 @@ const Container = styled.button<{ height: string; width: string }>`
   background: none;
   cursor: pointer;
   outline: none;
-  height: ${props => props.height};
-  width: ${props => props.width};
+  height: ${(props) => props.height};
+  width: ${(props) => props.width};
+
+  & > svg {
+    transform: translateY(5%);
+    overflow: visible;
+  }
 `;
 
 interface SvgButtonProps extends React.HTMLAttributes<HTMLButtonElement> {

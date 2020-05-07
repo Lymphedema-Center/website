@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Context as AppContext } from "../context/app/context";
 import { useTransition, animated } from "react-spring";
 import { toggleDrawer } from "../context/app/actions";
+import Drawer from "../composed/Drawer";
 
 const OverlayView = styled.div`
   position: absolute;
@@ -12,11 +13,7 @@ const OverlayView = styled.div`
   background-color: rgba(123, 123, 123, 0.5);
 `;
 
-const DrawerTest = styled(animated.div)`
-  width: 85%;
-  max-width: 400px;
-  height: 100%;
-  background-color: red;
+const EDrawer = styled(Drawer)`
   position: relative;
   top: 0;
   left: 0;
@@ -49,7 +46,7 @@ const Overlay = (
     >
       {drawerTransition.map(({ item, props }) =>
         item ? (
-          <DrawerTest
+          <Drawer
             key="drawerkey"
             onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
               event.stopPropagation()
