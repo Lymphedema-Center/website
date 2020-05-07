@@ -6,12 +6,24 @@ const reducer = (state: IContextState, action: IAction) => {
   switch (action.type) {
     // drawer actions
     case Action.ToggleDrawer:
-      const drawerOpen = !state.drawerOpen;
-      const newVisibility = any([drawerOpen]);
+      const drawerOpen = !state.overlay.components.drawer.open;
+      const newVisibility = any([
+        ...Object.values(state.overlay.components).map(
+          (component) => component.open
+        ),
+        drawerOpen,
+      ]);
       return {
         ...state,
-        drawerOpen: drawerOpen,
-        overlayVisible: newVisibility,
+        overlay: {
+          visible: newVisibility,
+          components: {
+            ...state.overlay.components,
+            drawer: {
+              open: drawerOpen,
+            },
+          },
+        },
       };
 
     default:

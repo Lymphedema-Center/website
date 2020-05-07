@@ -10,6 +10,7 @@ import {
   Context as AppContext,
 } from "../components/context/app/context";
 import { toggleDrawer } from "../components/context/app/actions";
+import Overlay from "../components/overlay/Overlay";
 
 // load global stylesheets
 import "../node_modules/normalize.css/normalize.css";
@@ -38,6 +39,7 @@ export default class MyApp extends App {
           <AppContext.Consumer>
             {(value) => (
               <>
+                <Overlay visible={value.state.overlay.visible} />
                 <FixedHeader
                   hamburgerOnClick={() => {
                     value.dispatch(toggleDrawer());

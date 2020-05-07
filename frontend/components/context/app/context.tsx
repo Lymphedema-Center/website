@@ -3,14 +3,26 @@ import { IAction } from "./actions";
 import reducer from "./reducer";
 
 export interface IContextState {
-  drawerOpen: boolean;
-  overlayVisible: boolean;
+  overlay: {
+    visible: boolean;
+    components: {
+      drawer: {
+        open: boolean;
+      };
+    };
+  };
 }
 
 const initialState = {
   state: {
-    drawerOpen: false,
-    overlayVisible: false,
+    overlay: {
+      visible: false,
+      components: {
+        drawer: {
+          open: false,
+        },
+      },
+    },
   },
   dispatch: (action: IAction) => {},
 };
