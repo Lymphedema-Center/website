@@ -8,6 +8,7 @@ import {
   toggleSignUp,
   toggleResetPass,
   toggleChangeName,
+  toggleChangePass,
 } from "../../context/app/actions";
 import { Auth } from "aws-amplify";
 import { animated } from "react-spring";
@@ -148,7 +149,7 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
                     svg={<PasswordCardIcon size="32px" />}
                     label="Change Password"
                     onClick={() => {
-                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleChangePass());
                       appCtx.dispatch(toggleDrawer());
                     }}
                   />

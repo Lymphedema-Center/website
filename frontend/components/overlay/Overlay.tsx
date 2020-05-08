@@ -8,6 +8,7 @@ import {
   toggleSignUp,
   toggleResetPass,
   toggleChangeName,
+  toggleChangePass,
 } from "../context/app/actions";
 import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
@@ -15,6 +16,7 @@ import SignInModal from "./SignInModal";
 import SignUpModal from "./SignUpModal";
 import ResetPasswordModal from "./ResetPasswordModal";
 import ChangeNameModal from "./ChangeNameModal";
+import ChangePasswordModal from "./ChangePasswordModal";
 import MWC from "../layout/MWC";
 
 const OverlayView = styled(animated.div)`
@@ -99,6 +101,9 @@ const Overlay = (
         if (appCtx.state.overlay.components.changeName.open) {
           appCtx.dispatch(toggleChangeName());
         }
+        if (appCtx.state.overlay.components.changePassword.open) {
+          appCtx.dispatch(toggleChangePass());
+        }
       }}
     >
       {drawerTransition.map(({ item, props }) =>
@@ -142,6 +147,15 @@ const Overlay = (
       {appCtx.state.overlay.components.changeName.open ? (
         <EMWC>
           <ChangeNameModal
+            onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
+              event.stopPropagation();
+            }}
+          />
+        </EMWC>
+      ) : null}
+      {appCtx.state.overlay.components.changePassword.open ? (
+        <EMWC>
+          <ChangePasswordModal
             onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
               event.stopPropagation();
             }}
