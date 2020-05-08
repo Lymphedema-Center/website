@@ -66,6 +66,36 @@ const reducer = (state: IContextState, action: IAction) => {
           components: newComponents,
         },
       };
+    case Action.ToggleChangeName:
+      const changeNameOpen = !state.overlay.components.changeName.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.changeName.open = changeNameOpen;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        changeNameOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
+    case Action.ToggleChangePass:
+      const changePassOpen = !state.overlay.components.changePassword.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.changePassword.open = changePassOpen;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        changePassOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
 
     // notification actions
     case Action.AddNotification:

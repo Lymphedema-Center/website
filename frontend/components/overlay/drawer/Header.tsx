@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context as AppContext } from "../../context/app/context";
+import { toggleDrawer } from "../../context/app/actions";
 import styled from "styled-components";
 import SvgCircle from "../../decoration/SvgCircle";
 import SvgButton from "../../button/SvgButton";
@@ -57,23 +59,23 @@ const CloseButton = styled(SvgButton)`
   }
 `;
 
-const Header = (
-  props: {
-    firstname: string;
-    lastname: string;
-    closefn: () => void;
-  } & React.HTMLAttributes<HTMLDivElement>
-) => {
+const Header = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const appCtx = useContext(AppContext);
+
   return (
     <HeaderView {...filterProps(props, ["closefn"])}>
-      {props.firstname ? <Avatar svg={<AvatarIcon size="60%" />} /> : null}
-      {props.firstname ? <FirstName>{props.firstname}</FirstName> : null}
-      {props.lastname ? <LastName>{props.lastname}</LastName> : null}
+      {appCtx.state.user ? <Avatar svg={<AvatarIcon size="60%" />} /> : null}
+      {appCtx.state.user ? (
+        <FirstName>{appCtx.state.user.given_name}</FirstName>
+      ) : null}
+      {appCtx.state.user ? (
+        <LastName>{appCtx.state.user.family_name}</LastName>
+      ) : null}
       <CloseButton
         svg={<CloseIcon size="65%" />}
         height={"32px"}
         width={"32px"}
-        onClick={props.closefn}
+        onClick={() => appCtx.dispatch(toggleDrawer())}
       />
     </HeaderView>
   );

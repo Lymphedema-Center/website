@@ -34,6 +34,12 @@ export interface IContextState {
       resetPass: {
         open: boolean;
       };
+      changeName: {
+        open: boolean;
+      };
+      changePassword: {
+        open: boolean;
+      };
     };
   };
   notifications: INotification[];
@@ -55,6 +61,12 @@ const initialState = {
           open: false,
         },
         resetPass: {
+          open: false,
+        },
+        changeName: {
+          open: false,
+        },
+        changePassword: {
           open: false,
         },
       },

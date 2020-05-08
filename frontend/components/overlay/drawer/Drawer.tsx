@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { Context as AppContext } from "../../context/app/context";
@@ -7,6 +7,7 @@ import {
   toggleSignIn,
   toggleSignUp,
   toggleResetPass,
+  toggleChangeName,
 } from "../../context/app/actions";
 import { Auth } from "aws-amplify";
 import { animated } from "react-spring";
@@ -93,11 +94,7 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
 
   return (
     <DrawerView {...props}>
-      <Header
-        firstname={appCtx.state.user ? appCtx.state.user.given_name : ""}
-        lastname={appCtx.state.user ? appCtx.state.user.family_name : ""}
-        closefn={() => appCtx.dispatch(toggleDrawer())}
-      />
+      <Header />
       <MainOverflowView>
         <MainView>
           <QuicklinksSection>
@@ -143,7 +140,7 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
                     svg={<NameCardIcon size="32px" />}
                     label="Change Name"
                     onClick={() => {
-                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleChangeName());
                       appCtx.dispatch(toggleDrawer());
                     }}
                   />
