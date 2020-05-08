@@ -21,12 +21,19 @@ const Container = styled.form`
   }
 `;
 
-const CloseButton = styled(SvgButton)`
+const CloseButton = styled.div`
   position: absolute;
   top: 15px;
   right: 15px;
   background-color: ${(props) => props.theme.colors.fill.grayscale.c200};
   border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  height: 32px;
+  width: 32px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 
   &:active {
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
@@ -49,14 +56,13 @@ const AuthModal = (
   return (
     <Container {...filterProps(props, ["title"])}>
       <CloseButton
-        height="32px"
-        width="32px"
-        svg={<CloseIcon size="65%" />}
         onClick={(e: any) => {
           e.preventDefault();
           props.closefn();
         }}
-      />
+      >
+        <CloseIcon size="65%" />
+      </CloseButton>
       <UnderlineTitle
         message={props.message}
         color={theme.colors.fill.brand.skin}

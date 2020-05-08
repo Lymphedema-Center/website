@@ -1,9 +1,12 @@
+import { IUser } from "./context";
+
 export enum Action {
   ToggleDrawer = "TOGGLE_DRAWER",
   ToggleSignIn = "TOGGLE_SIGN_IN",
   ToggleSignUp = "TOGGLE_SIGN_UP",
   AddNotification = "ADD_NOTIFICATION",
   RemoveNotification = "REMOVE_NOTIFICATION",
+  SetUser = "SET_USER",
 }
 
 export interface IAction {
@@ -56,6 +59,16 @@ export const removeNotification: (id: string) => IAction = (id) => {
     type: Action.RemoveNotification,
     payload: {
       id,
+    },
+  };
+};
+
+// set user
+export const setUser: (user: IUser | null) => IAction = (user) => {
+  return {
+    type: Action.SetUser,
+    payload: {
+      user,
     },
   };
 };

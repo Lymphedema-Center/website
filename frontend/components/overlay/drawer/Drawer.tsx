@@ -6,7 +6,9 @@ import {
   toggleDrawer,
   toggleSignIn,
   toggleSignUp,
+  setUser,
 } from "../../context/app/actions";
+import { Auth } from "aws-amplify";
 import { animated } from "react-spring";
 import Header from "./Header";
 import Quicklink from "./Quicklink";
@@ -16,7 +18,6 @@ import NotebookIcon from "../../svg/icon/NotebookIcon";
 import ActionButton from "./ActionButton";
 import NameCardIcon from "../../svg/icon/NameCardIcon";
 import PasswordCardIcon from "../../svg/icon/PasswordCardIcon";
-import ForumPostIcon from "../../svg/icon/ForumPostIcon";
 import LogPostIcon from "../../svg/icon/LogPostIcon";
 import SignInIcon from "../../svg/icon/SignInIcon";
 import SignUpIcon from "../../svg/icon/SignUpIcon";
@@ -84,9 +85,19 @@ const ActionsGrid = styled.div`
 const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
   const appCtx = useContext(AppContext);
 
+  const signOut = () => {
+    Auth.signOut().catch((err) => {
+      console.log(err);
+    });
+  };
+
   return (
     <DrawerView {...props}>
-      <Header closefn={() => appCtx.dispatch(toggleDrawer())} />
+      <Header
+        firstname={appCtx.state.user ? appCtx.state.user.given_name : ""}
+        lastname={appCtx.state.user ? appCtx.state.user.family_name : ""}
+        closefn={() => appCtx.dispatch(toggleDrawer())}
+      />
       <MainOverflowView>
         <MainView>
           <QuicklinksSection>
@@ -105,37 +116,78 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
                 onClick={() => appCtx.dispatch(toggleDrawer())}
               />
             </Link>
-            <Link href="/log" passHref>
-              <LogQuicklink
-                svg={<NotebookIcon size="60%" />}
-                text="Personal Treatment Log"
-                onClick={() => appCtx.dispatch(toggleDrawer())}
-              />
-            </Link>
+            {appCtx.state.user ? (
+              <Link href="/log" passHref>
+                <LogQuicklink
+                  svg={<NotebookIcon size="60%" />}
+                  text="Personal Treatment Log"
+                  onClick={() => appCtx.dispatch(toggleDrawer())}
+                />
+              </Link>
+            ) : null}
           </QuicklinksSection>
           <ActionsSection>
             <SectionTitle>Actions</SectionTitle>
             <ActionsGrid>
-              <ActionButton
-                svg={<SignUpIcon size="32px" />}
-                label="Sign Up"
-                onClick={() => {
-                  appCtx.dispatch(toggleSignUp());
-                  appCtx.dispatch(toggleDrawer());
-                }}
-              />
-              <ActionButton
-                svg={<SignInIcon size="32px" />}
-                label="Sign In"
-                onClick={() => {
-                  appCtx.dispatch(toggleSignIn());
-                  appCtx.dispatch(toggleDrawer());
-                }}
-              />
-              <ActionButton
-                svg={<ResetIcon size="32px" />}
-                label="Reset Password"
-              />
+              {appCtx.state.user ? (
+                <>
+                  <ActionButton
+                    svg={<SignOutIcon size="32px" />}
+                    label="Sign Out"
+                    onClick={() => {
+                      signOut();
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                  <ActionButton
+                    svg={<NameCardIcon size="32px" />}
+                    label="Change Name"
+                    onClick={() => {
+                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                  <ActionButton
+                    svg={<PasswordCardIcon size="32px" />}
+                    label="Change Password"
+                    onClick={() => {
+                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                  <ActionButton
+                    svg={<LogPostIcon size="32px" />}
+                    label="Create Log"
+                    onClick={() => {
+                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                </>
+              ) : (
+                <>
+                  <ActionButton
+                    svg={<SignUpIcon size="32px" />}
+                    label="Sign Up"
+                    onClick={() => {
+                      appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                  <ActionButton
+                    svg={<SignInIcon size="32px" />}
+                    label="Sign In"
+                    onClick={() => {
+                      appCtx.dispatch(toggleSignIn());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
+                  />
+                  <ActionButton
+                    svg={<ResetIcon size="32px" />}
+                    label="Reset Password"
+                  />
+                </>
+              )}
             </ActionsGrid>
           </ActionsSection>
         </MainView>

@@ -1,12 +1,21 @@
-import React, { useReducer, createContext } from "react";
-import { IAction } from "./actions";
+import React, { useReducer, createContext, useEffect } from "react";
+import { IAction, setUser } from "./actions";
 import reducer from "./reducer";
+import { Hub, Auth } from "aws-amplify";
 
 export interface INotification {
   type: string;
   message: string;
   ttl: null | number;
   id: string;
+}
+
+export interface IUser {
+  email: string;
+  email_verifified: boolean;
+  family_name: string;
+  given_name: string;
+  sub: string;
 }
 
 export interface IContextState {
@@ -25,6 +34,7 @@ export interface IContextState {
     };
   };
   notifications: INotification[];
+  user: IUser | null;
 }
 
 const initialState = {
@@ -44,6 +54,7 @@ const initialState = {
       },
     },
     notifications: [],
+    user: null,
   },
   dispatch: (action: IAction) => {},
 };
@@ -55,6 +66,29 @@ export const Context = createContext<{
 
 export const ContextProvider = (props: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, initialState.state);
+
+  useEffect(() => {
+    Hub.listen("auth", (data) => {
+      switch (data.payload.event) {
+        case "signIn":
+          dispatch(setUser(data.payload.data.attributes));
+          break;
+        case "signOut":
+          dispatch(setUser(null));
+          break;
+      }
+    });
+
+    if (!state.user) {
+      Auth.currentAuthenticatedUser()
+        .then((user) => {
+          dispatch(setUser(user.attributes));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, []);
 
   return (
     <Context.Provider value={{ state, dispatch }}>

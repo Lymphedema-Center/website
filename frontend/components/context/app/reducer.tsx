@@ -74,6 +74,13 @@ const reducer = (state: IContextState, action: IAction) => {
         ),
       };
 
+    // set user
+    case Action.SetUser:
+      return {
+        ...state,
+        user: action.payload.user,
+      };
+
     default:
       return state;
   }

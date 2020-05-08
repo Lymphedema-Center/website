@@ -58,13 +58,17 @@ const CloseButton = styled(SvgButton)`
 `;
 
 const Header = (
-  props: { closefn: () => void } & React.HTMLAttributes<HTMLDivElement>
+  props: {
+    firstname: string;
+    lastname: string;
+    closefn: () => void;
+  } & React.HTMLAttributes<HTMLDivElement>
 ) => {
   return (
     <HeaderView {...filterProps(props, ["closefn"])}>
-      <Avatar svg={<AvatarIcon size="60%" />} />
-      <FirstName>First</FirstName>
-      <LastName>LastName</LastName>
+      {props.firstname ? <Avatar svg={<AvatarIcon size="60%" />} /> : null}
+      {props.firstname ? <FirstName>{props.firstname}</FirstName> : null}
+      {props.lastname ? <LastName>{props.lastname}</LastName> : null}
       <CloseButton
         svg={<CloseIcon size="65%" />}
         height={"32px"}
