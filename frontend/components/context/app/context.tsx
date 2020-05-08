@@ -19,6 +19,9 @@ export interface IContextState {
       signIn: {
         open: boolean;
       };
+      signUp: {
+        open: boolean;
+      };
     };
   };
   notifications: INotification[];
@@ -33,6 +36,9 @@ const initialState = {
           open: false,
         },
         signIn: {
+          open: false,
+        },
+        signUp: {
           open: false,
         },
       },

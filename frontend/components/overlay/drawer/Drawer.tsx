@@ -2,7 +2,11 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { Context as AppContext } from "../../context/app/context";
-import { toggleDrawer, toggleSignIn } from "../../context/app/actions";
+import {
+  toggleDrawer,
+  toggleSignIn,
+  toggleSignUp,
+} from "../../context/app/actions";
 import { animated } from "react-spring";
 import Header from "./Header";
 import Quicklink from "./Quicklink";
@@ -112,7 +116,14 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
           <ActionsSection>
             <SectionTitle>Actions</SectionTitle>
             <ActionsGrid>
-              <ActionButton svg={<SignUpIcon size="32px" />} label="Sign Up" />
+              <ActionButton
+                svg={<SignUpIcon size="32px" />}
+                label="Sign Up"
+                onClick={() => {
+                  appCtx.dispatch(toggleSignUp());
+                  appCtx.dispatch(toggleDrawer());
+                }}
+              />
               <ActionButton
                 svg={<SignInIcon size="32px" />}
                 label="Sign In"

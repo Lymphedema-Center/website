@@ -1,6 +1,7 @@
 export enum Action {
   ToggleDrawer = "TOGGLE_DRAWER",
   ToggleSignIn = "TOGGLE_SIGN_IN",
+  ToggleSignUp = "TOGGLE_SIGN_UP",
   AddNotification = "ADD_NOTIFICATION",
   RemoveNotification = "REMOVE_NOTIFICATION",
 }
@@ -23,6 +24,13 @@ export const toggleDrawer: () => IAction = () => {
 export const toggleSignIn: () => IAction = () => {
   return {
     type: Action.ToggleSignIn,
+    payload: {},
+  };
+};
+
+export const toggleSignUp: () => IAction = () => {
+  return {
+    type: Action.ToggleSignUp,
     payload: {},
   };
 };

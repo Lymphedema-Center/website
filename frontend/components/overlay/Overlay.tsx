@@ -2,10 +2,15 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Context as AppContext } from "../context/app/context";
 import { useTransition, animated, useSpring } from "react-spring";
-import { toggleDrawer, toggleSignIn } from "../context/app/actions";
+import {
+  toggleDrawer,
+  toggleSignIn,
+  toggleSignUp,
+} from "../context/app/actions";
 import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
 import SignInModal from "./SignInModal";
+import SignUpModal from "./SignUpModal";
 import MWC from "../layout/MWC";
 
 const OverlayView = styled(animated.div)`
@@ -81,6 +86,9 @@ const Overlay = (
         if (appCtx.state.overlay.components.signIn.open) {
           appCtx.dispatch(toggleSignIn());
         }
+        if (appCtx.state.overlay.components.signUp.open) {
+          appCtx.dispatch(toggleSignUp());
+        }
       }}
     >
       {drawerTransition.map(({ item, props }) =>
@@ -100,6 +108,15 @@ const Overlay = (
             onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) =>
               event.stopPropagation()
             }
+          />
+        </EMWC>
+      ) : null}
+      {appCtx.state.overlay.components.signUp.open ? (
+        <EMWC>
+          <SignUpModal
+            onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
+              event.stopPropagation();
+            }}
           />
         </EMWC>
       ) : null}
