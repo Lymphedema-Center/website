@@ -11,6 +11,17 @@ import {
 } from "../components/context/app/context";
 import { toggleDrawer } from "../components/context/app/actions";
 import Overlay from "../components/overlay/Overlay";
+import Amplify from "aws-amplify";
+import NotificationCenter from "../components/composed/NotificationCenter";
+
+// configure amplify
+Amplify.configure({
+  Auth: {
+    region: "us-east-1",
+    userPoolId: process.env.userPoolId,
+    userPoolWebClientId: process.env.userPoolWebClientId,
+  },
+});
 
 // load global stylesheets
 import "../node_modules/normalize.css/normalize.css";
@@ -47,6 +58,7 @@ export default class MyApp extends App {
                   data-cy="FixedHeader"
                 />
                 <PageContainer>
+                  <NotificationCenter />
                   <InvisHeader hamburgerOnClick={() => {}} />
                   <Component {...pageProps} />
                 </PageContainer>

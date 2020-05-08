@@ -26,11 +26,6 @@ const ActionButtonView = styled.button`
   border-radius: 5px;
   cursor: pointer;
 
-  & > svg {
-    height: 32px;
-    width: 32px;
-  }
-
   &:active {
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
   }
@@ -56,8 +51,10 @@ const ActionButton = (
 ) => {
   return (
     <AspectRatioBox {...filterProps(props, ["svg", "label", "onClick"])}>
-      <ActionButtonView onClick={props.onClick}>{props.svg}</ActionButtonView>
-      <TextLabel>{props.label}</TextLabel>
+      <ActionButtonView onClick={props.onClick}>
+        {props.svg}
+        <TextLabel>{props.label}</TextLabel>
+      </ActionButtonView>
     </AspectRatioBox>
   );
 };

@@ -111,7 +111,14 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
           </QuicklinksSection>
           <ActionsSection>
             <SectionTitle>Actions</SectionTitle>
-            <ActionsGrid></ActionsGrid>
+            <ActionsGrid>
+              <ActionButton svg={<SignUpIcon size="32px" />} label="Sign Up" />
+              <ActionButton svg={<SignInIcon size="32px" />} label="Sign In" />
+              <ActionButton
+                svg={<ResetIcon size="32px" />}
+                label="Reset Password"
+              />
+            </ActionsGrid>
           </ActionsSection>
         </MainView>
       </MainOverflowView>

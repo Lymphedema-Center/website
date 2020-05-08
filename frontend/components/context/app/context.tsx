@@ -2,6 +2,13 @@ import React, { useReducer, createContext } from "react";
 import { IAction } from "./actions";
 import reducer from "./reducer";
 
+export interface INotification {
+  type: string;
+  message: string;
+  ttl: null | number;
+  id: string;
+}
+
 export interface IContextState {
   overlay: {
     visible: boolean;
@@ -11,6 +18,7 @@ export interface IContextState {
       };
     };
   };
+  notifications: INotification[];
 }
 
 const initialState = {
@@ -23,6 +31,7 @@ const initialState = {
         },
       },
     },
+    notifications: [],
   },
   dispatch: (action: IAction) => {},
 };
