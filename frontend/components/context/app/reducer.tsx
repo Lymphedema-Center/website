@@ -51,6 +51,21 @@ const reducer = (state: IContextState, action: IAction) => {
           components: newComponents,
         },
       };
+    case Action.ToggleResetPass:
+      const resetPassOpen = !state.overlay.components.resetPass.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.resetPass.open = resetPassOpen;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        resetPassOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
 
     // notification actions
     case Action.AddNotification:

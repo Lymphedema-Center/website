@@ -31,6 +31,9 @@ export interface IContextState {
       signUp: {
         open: boolean;
       };
+      resetPass: {
+        open: boolean;
+      };
     };
   };
   notifications: INotification[];
@@ -49,6 +52,9 @@ const initialState = {
           open: false,
         },
         signUp: {
+          open: false,
+        },
+        resetPass: {
           open: false,
         },
       },

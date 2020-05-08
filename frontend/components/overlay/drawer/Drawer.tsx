@@ -6,7 +6,7 @@ import {
   toggleDrawer,
   toggleSignIn,
   toggleSignUp,
-  setUser,
+  toggleResetPass,
 } from "../../context/app/actions";
 import { Auth } from "aws-amplify";
 import { animated } from "react-spring";
@@ -185,6 +185,10 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
                   <ActionButton
                     svg={<ResetIcon size="32px" />}
                     label="Reset Password"
+                    onClick={() => {
+                      appCtx.dispatch(toggleResetPass());
+                      appCtx.dispatch(toggleDrawer());
+                    }}
                   />
                 </>
               )}

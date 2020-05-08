@@ -11,6 +11,7 @@ import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
 import SignInModal from "./SignInModal";
 import SignUpModal from "./SignUpModal";
+import ResetPasswordModal from "./ResetPasswordModal";
 import MWC from "../layout/MWC";
 
 const OverlayView = styled(animated.div)`
@@ -114,6 +115,15 @@ const Overlay = (
       {appCtx.state.overlay.components.signUp.open ? (
         <EMWC>
           <SignUpModal
+            onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
+              event.stopPropagation();
+            }}
+          />
+        </EMWC>
+      ) : null}
+      {appCtx.state.overlay.components.resetPass.open ? (
+        <EMWC>
+          <ResetPasswordModal
             onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
               event.stopPropagation();
             }}
