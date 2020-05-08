@@ -13,6 +13,7 @@ const NotificationCenterMWC = styled(MWC)`
   display: grid;
   justify-items: center;
   grid-template-areas: ". notification .";
+  z-index: 100;
 `;
 
 const NotificationCenter = (props: React.HTMLAttributes<HTMLDivElement>) => {

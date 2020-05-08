@@ -16,6 +16,9 @@ export interface IContextState {
       drawer: {
         open: boolean;
       };
+      signIn: {
+        open: boolean;
+      };
     };
   };
   notifications: INotification[];
@@ -27,6 +30,9 @@ const initialState = {
       visible: false,
       components: {
         drawer: {
+          open: false,
+        },
+        signIn: {
           open: false,
         },
       },

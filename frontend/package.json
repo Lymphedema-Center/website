@@ -16,7 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "@types/uuid": "^7.0.3",
+    "@types/yup": "^0.28.0",
     "aws-amplify": "^3.0.10",
+    "formik": "^2.1.4",
     "next": "^9.3.4",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
@@ -24,7 +26,8 @@
     "react-is": "^16.13.1",
     "react-spring": "^8.0.27",
     "styled-components": "^4.4.1",
-    "uuid": "^8.0.0"
+    "uuid": "^8.0.0",
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

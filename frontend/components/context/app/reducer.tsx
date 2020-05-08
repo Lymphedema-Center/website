@@ -5,14 +5,29 @@ import { v4 as uuidv4 } from "uuid";
 
 const reducer = (state: IContextState, action: IAction) => {
   switch (action.type) {
-    // drawer actions
+    // overlay actions
     case Action.ToggleDrawer:
       const drawerOpen = !state.overlay.components.drawer.open;
-      const newComponents = { ...state.overlay.components };
+      let newComponents = { ...state.overlay.components };
       newComponents.drawer.open = drawerOpen;
-      const newVisibility = any([
+      let newVisibility = any([
         ...Object.values(newComponents).map((component) => component.open),
         drawerOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
+    case Action.ToggleSignIn:
+      const signInOpen = !state.overlay.components.signIn.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.signIn.open = signInOpen;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        signInOpen,
       ]);
       return {
         ...state,

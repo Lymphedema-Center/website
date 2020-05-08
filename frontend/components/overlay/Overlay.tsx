@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Context as AppContext } from "../context/app/context";
 import { useTransition, animated, useSpring } from "react-spring";
-import { toggleDrawer } from "../context/app/actions";
+import { toggleDrawer, toggleSignIn } from "../context/app/actions";
 import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
+import SignInModal from "./SignInModal";
+import MWC from "../layout/MWC";
 
 const OverlayView = styled(animated.div)`
   position: absolute;
@@ -18,6 +20,11 @@ const EDrawer = styled(Drawer)`
   position: relative;
   top: 0;
   left: 0;
+`;
+const EMWC = styled(MWC)`
+  height: 100%;
+  align-items: center;
+  justify-items: center;
 `;
 
 const Overlay = (
@@ -71,6 +78,9 @@ const Overlay = (
         if (appCtx.state.overlay.components.drawer.open) {
           appCtx.dispatch(toggleDrawer());
         }
+        if (appCtx.state.overlay.components.signIn.open) {
+          appCtx.dispatch(toggleSignIn());
+        }
       }}
     >
       {drawerTransition.map(({ item, props }) =>
@@ -84,6 +94,15 @@ const Overlay = (
           />
         ) : null
       )}
+      {appCtx.state.overlay.components.signIn.open ? (
+        <EMWC>
+          <SignInModal
+            onClick={(event: React.MouseEvent<HTMLFormElement, MouseEvent>) =>
+              event.stopPropagation()
+            }
+          />
+        </EMWC>
+      ) : null}
     </OverlayView>
   );
 };
