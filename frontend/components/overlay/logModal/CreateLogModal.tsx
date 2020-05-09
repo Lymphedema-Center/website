@@ -1,6 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Context as AppContext } from "../../context/app/context";
-import { toggleCreateLog } from "../../context/app/actions";
+import {
+  toggleCreateLog,
+  addLog,
+  addNotification,
+} from "../../context/app/actions";
 import styled from "styled-components";
 import SvgButton from "../../button/SvgButton";
 import SendIcon from "../../svg/icon/SendIcon";
@@ -11,7 +15,6 @@ import SlateEditor from "../../wysiwyg/SlateEditor";
 import { Node } from "slate";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import ErrorMessage from "../../input/ErrorMessage";
 import TextInput from "../../input/TextInput";
 
 const CircleButton = styled(SvgButton)`
@@ -88,12 +91,21 @@ const CreateLogModal = (props: React.HTMLAttributes<HTMLDivElement>) => {
             height="32px"
             width="32px"
             svg={<SendIcon size="65%" />}
+            onClick={() => {
+              appCtx.dispatch(addLog(formik.values.title, value));
+              appCtx.dispatch(
+                addNotification("SUCCESS", "Added a personal log.", 2000)
+              );
+              appCtx.dispatch(toggleCreateLog());
+            }}
           />
           <CircleButton
             height="32px"
             width="32px"
             svg={<CloseIcon size="65%" />}
-            onClick={() => appCtx.dispatch(toggleCreateLog())}
+            onClick={() => {
+              appCtx.dispatch(toggleCreateLog());
+            }}
           />
         </>
       }

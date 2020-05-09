@@ -141,6 +141,31 @@ const reducer = (state: IContextState, action: IAction) => {
         user: action.payload.user,
       };
 
+    // log info
+    case Action.AddLog:
+      let newLogs = [
+        ...state.logs,
+        {
+          id: uuidv4(),
+          createdAt: new Date(),
+          title: action.payload.title,
+          content: action.payload.content,
+        },
+      ].sort((a, b) => {
+        if (a.createdAt >= b.createdAt) return 1;
+        else return -1;
+      });
+      localStorage.setItem("logs", JSON.stringify(newLogs));
+      return {
+        ...state,
+        logs: newLogs,
+      };
+    case Action.SetLogs:
+      return {
+        ...state,
+        logs: action.payload.logs,
+      };
+
     default:
       return state;
   }

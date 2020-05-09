@@ -1,4 +1,5 @@
-import { IUser } from "./context";
+import { IUser, ILog } from "./context";
+import { Node } from "slate";
 
 export enum Action {
   ToggleDrawer = "TOGGLE_DRAWER",
@@ -11,6 +12,8 @@ export enum Action {
   AddNotification = "ADD_NOTIFICATION",
   RemoveNotification = "REMOVE_NOTIFICATION",
   SetUser = "SET_USER",
+  AddLog = "ADD_LOG",
+  SetLogs = "SET_LOGS",
 }
 
 export interface IAction {
@@ -101,6 +104,29 @@ export const setUser: (user: IUser | null) => IAction = (user) => {
     type: Action.SetUser,
     payload: {
       user,
+    },
+  };
+};
+
+// logs
+export const addLog: (title: string, content: Node[]) => IAction = (
+  title,
+  content
+) => {
+  return {
+    type: Action.AddLog,
+    payload: {
+      title,
+      content,
+    },
+  };
+};
+
+export const setLogs: (logs: ILog[]) => IAction = (logs) => {
+  return {
+    type: Action.SetLogs,
+    payload: {
+      logs,
     },
   };
 };

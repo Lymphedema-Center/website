@@ -41,6 +41,7 @@ const Container = styled.div`
 const ESlateToolbar = styled(SlateToolbar)`
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
+  z-index: 51;
 `;
 
 // elements

@@ -2,6 +2,7 @@ import React, { useReducer, createContext, useEffect } from "react";
 import { IAction, setUser } from "./actions";
 import reducer from "./reducer";
 import { Hub, Auth } from "aws-amplify";
+import { Node } from "slate";
 
 export interface INotification {
   type: string;
@@ -16,6 +17,13 @@ export interface IUser {
   family_name: string;
   given_name: string;
   sub: string;
+}
+
+export interface ILog {
+  id: string;
+  createdAt: Date;
+  title: string;
+  content: Node[];
 }
 
 export interface IContextState {
@@ -47,6 +55,7 @@ export interface IContextState {
   };
   notifications: INotification[];
   user: IUser | null;
+  logs: ILog[];
 }
 
 const initialState = {
@@ -79,6 +88,7 @@ const initialState = {
     },
     notifications: [],
     user: null,
+    logs: [],
   },
   dispatch: (action: IAction) => {},
 };
@@ -102,7 +112,6 @@ export const ContextProvider = (props: { children: React.ReactNode }) => {
           break;
       }
     });
-
     if (!state.user) {
       Auth.currentAuthenticatedUser()
         .then((user) => {
@@ -111,6 +120,17 @@ export const ContextProvider = (props: { children: React.ReactNode }) => {
         .catch((err) => {
           console.log(err);
         });
+    }
+  }, []);
+
+  // populate the logs
+  useEffect(() => {
+    const logs = localStorage.getItem("logs");
+    if (logs) {
+      const logsJson = JSON.parse(logs);
+      logsJson.forEach((log: any) => {
+        log.createdAt = new Date(log.createdAt);
+      });
     }
   }, []);
 
