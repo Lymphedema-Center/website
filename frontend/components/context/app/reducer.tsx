@@ -96,6 +96,21 @@ const reducer = (state: IContextState, action: IAction) => {
           components: newComponents,
         },
       };
+    case Action.ToggleCreateLog:
+      const createLogOpen = !state.overlay.components.createLog.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.createLog.open = createLogOpen;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        createLogOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
 
     // notification actions
     case Action.AddNotification:

@@ -40,6 +40,9 @@ export interface IContextState {
       changePassword: {
         open: boolean;
       };
+      createLog: {
+        open: boolean;
+      };
     };
   };
   notifications: INotification[];
@@ -67,6 +70,9 @@ const initialState = {
           open: false,
         },
         changePassword: {
+          open: false,
+        },
+        createLog: {
           open: false,
         },
       },

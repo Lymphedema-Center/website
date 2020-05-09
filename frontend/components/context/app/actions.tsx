@@ -7,6 +7,7 @@ export enum Action {
   ToggleResetPass = "TOGGLE_RESET_PASS",
   ToggleChangeName = "TOGGLE_CHANGE_NAME",
   ToggleChangePass = "TOGGLE_CHANGE_PASS",
+  ToggleCreateLog = "TOGGLE_CREATE_LOG",
   AddNotification = "ADD_NOTIFICATION",
   RemoveNotification = "REMOVE_NOTIFICATION",
   SetUser = "SET_USER",
@@ -58,6 +59,13 @@ export const toggleChangeName: () => IAction = () => {
 export const toggleChangePass: () => IAction = () => {
   return {
     type: Action.ToggleChangePass,
+    payload: {},
+  };
+};
+
+export const toggleCreateLog: () => IAction = () => {
+  return {
+    type: Action.ToggleCreateLog,
     payload: {},
   };
 };

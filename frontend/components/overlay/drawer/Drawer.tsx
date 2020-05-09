@@ -9,6 +9,7 @@ import {
   toggleResetPass,
   toggleChangeName,
   toggleChangePass,
+  toggleCreateLog,
 } from "../../context/app/actions";
 import { Auth } from "aws-amplify";
 import { animated } from "react-spring";
@@ -157,7 +158,7 @@ const Drawer = (props: {} & React.HTMLAttributes<HTMLDivElement>) => {
                     svg={<LogPostIcon size="32px" />}
                     label="Create Log"
                     onClick={() => {
-                      // appCtx.dispatch(toggleSignUp());
+                      appCtx.dispatch(toggleCreateLog());
                       appCtx.dispatch(toggleDrawer());
                     }}
                   />
