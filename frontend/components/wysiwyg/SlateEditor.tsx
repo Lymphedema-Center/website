@@ -172,7 +172,7 @@ const SlateEditor = (
         <ESlateToolbar />
         <Container>
           <Editable
-            renderElement={renderElement}
+            renderElement={renderElement as any}
             renderLeaf={renderLeaf}
             autoFocus
           />

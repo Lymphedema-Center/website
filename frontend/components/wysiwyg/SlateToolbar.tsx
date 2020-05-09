@@ -141,18 +141,18 @@ const SlateToolbar = (props: React.HTMLAttributes<HTMLDivElement>) => {
       <ButtonBar>
         <SquareButton
           svg={<Header1Icon size="55%" />}
-          on={CustomEditor.isMarkActive(editor, "header1")}
+          on={CustomEditor.isBlockActive(editor, "header1")}
           onClick={(e: any) => {
             e.preventDefault();
-            CustomEditor.toggleMark(editor, "header1");
+            CustomEditor.toggleBlock(editor, "header1");
           }}
         />
         <SquareButton
           svg={<Header2Icon size="55%" />}
-          on={CustomEditor.isMarkActive(editor, "header2")}
+          on={CustomEditor.isBlockActive(editor, "header2")}
           onClick={(e: any) => {
             e.preventDefault();
-            CustomEditor.toggleMark(editor, "header2");
+            CustomEditor.toggleBlock(editor, "header2");
           }}
         />
       </ButtonBar>
