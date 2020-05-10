@@ -1,5 +1,5 @@
 import React, { useReducer, createContext, useEffect } from "react";
-import { IAction, setUser } from "./actions";
+import { IAction, setUser, setLogs } from "./actions";
 import reducer from "./reducer";
 import { Hub, Auth } from "aws-amplify";
 import { Node } from "slate";
@@ -51,6 +51,14 @@ export interface IContextState {
       createLog: {
         open: boolean;
       };
+      editLog: {
+        open: boolean;
+        id: string;
+      };
+      viewLog: {
+        open: boolean;
+        id: string;
+      };
     };
   };
   notifications: INotification[];
@@ -83,6 +91,14 @@ const initialState = {
         },
         createLog: {
           open: false,
+        },
+        editLog: {
+          open: false,
+          id: "",
+        },
+        viewLog: {
+          open: false,
+          id: "",
         },
       },
     },
@@ -131,6 +147,7 @@ export const ContextProvider = (props: { children: React.ReactNode }) => {
       logsJson.forEach((log: any) => {
         log.createdAt = new Date(log.createdAt);
       });
+      dispatch(setLogs(logsJson));
     }
   }, []);
 

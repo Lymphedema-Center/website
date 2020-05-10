@@ -111,6 +111,38 @@ const reducer = (state: IContextState, action: IAction) => {
           components: newComponents,
         },
       };
+    case Action.ToggleEditLog:
+      const editLogOpen = !state.overlay.components.editLog.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.editLog.open = editLogOpen;
+      newComponents.editLog.id = action.payload.id;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        editLogOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
+    case Action.ToggleViewLog:
+      const viewLogOpen = !state.overlay.components.viewLog.open;
+      newComponents = { ...state.overlay.components };
+      newComponents.viewLog.open = viewLogOpen;
+      newComponents.viewLog.id = action.payload.id;
+      newVisibility = any([
+        ...Object.values(newComponents).map((component) => component.open),
+        viewLogOpen,
+      ]);
+      return {
+        ...state,
+        overlay: {
+          visible: newVisibility,
+          components: newComponents,
+        },
+      };
 
     // notification actions
     case Action.AddNotification:
@@ -164,6 +196,25 @@ const reducer = (state: IContextState, action: IAction) => {
       return {
         ...state,
         logs: action.payload.logs,
+      };
+    case Action.UpdateLog:
+      newLogs = state.logs.filter((log) => log.id !== action.payload.log.id);
+      newLogs.push(action.payload.log);
+      newLogs.sort((a, b) => {
+        if (a.createdAt >= b.createdAt) return 1;
+        else return -1;
+      });
+      localStorage.setItem("logs", JSON.stringify(newLogs));
+      return {
+        ...state,
+        logs: newLogs,
+      };
+    case Action.DeleteLog:
+      newLogs = state.logs.filter((log) => log.id !== action.payload.id);
+      localStorage.setItem("logs", JSON.stringify(newLogs));
+      return {
+        ...state,
+        logs: newLogs,
       };
 
     default:

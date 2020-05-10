@@ -10,6 +10,8 @@ import {
   toggleChangeName,
   toggleChangePass,
   toggleCreateLog,
+  toggleEditLog,
+  toggleViewLog,
 } from "../context/app/actions";
 import Drawer from "./drawer/Drawer";
 import { filterProps } from "../helpers";
@@ -19,6 +21,8 @@ import ResetPasswordModal from "./ResetPasswordModal";
 import ChangeNameModal from "./ChangeNameModal";
 import ChangePasswordModal from "./ChangePasswordModal";
 import CreateLogModal from "./logModal/CreateLogModal";
+import EditLogModal from "./logModal/EditLogModal";
+import ViewLogModal from "./logModal/ViewLogModal";
 import MWC from "../layout/MWC";
 
 const OverlayView = styled(animated.div)`
@@ -110,6 +114,12 @@ const Overlay = (
         if (appCtx.state.overlay.components.createLog.open) {
           appCtx.dispatch(toggleCreateLog());
         }
+        if (appCtx.state.overlay.components.editLog.open) {
+          appCtx.dispatch(toggleEditLog(""));
+        }
+        if (appCtx.state.overlay.components.viewLog.open) {
+          appCtx.dispatch(toggleViewLog(""));
+        }
       }}
     >
       {drawerTransition.map(({ item, props }) =>
@@ -171,6 +181,28 @@ const Overlay = (
       {appCtx.state.overlay.components.createLog.open ? (
         <EMWC>
           <CreateLogModal
+            onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+              event.stopPropagation();
+            }}
+          />
+        </EMWC>
+      ) : null}
+      {appCtx.state.overlay.components.editLog.open &&
+      appCtx.state.overlay.components.editLog.id ? (
+        <EMWC>
+          <EditLogModal
+            id={appCtx.state.overlay.components.editLog.id}
+            onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+              event.stopPropagation();
+            }}
+          />
+        </EMWC>
+      ) : null}
+      {appCtx.state.overlay.components.viewLog.open &&
+      appCtx.state.overlay.components.viewLog.id ? (
+        <EMWC>
+          <ViewLogModal
+            id={appCtx.state.overlay.components.viewLog.id}
             onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
               event.stopPropagation();
             }}

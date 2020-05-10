@@ -9,11 +9,15 @@ export enum Action {
   ToggleChangeName = "TOGGLE_CHANGE_NAME",
   ToggleChangePass = "TOGGLE_CHANGE_PASS",
   ToggleCreateLog = "TOGGLE_CREATE_LOG",
+  ToggleEditLog = "TOGGLE_EDIT_LOG",
+  ToggleViewLog = "TOGGLE_VIEW_LOG",
   AddNotification = "ADD_NOTIFICATION",
   RemoveNotification = "REMOVE_NOTIFICATION",
   SetUser = "SET_USER",
   AddLog = "ADD_LOG",
   SetLogs = "SET_LOGS",
+  UpdateLog = "UPDATE_LOG",
+  DeleteLog = "DELETE_LOG",
 }
 
 export interface IAction {
@@ -73,6 +77,24 @@ export const toggleCreateLog: () => IAction = () => {
   };
 };
 
+export const toggleEditLog: (id: string) => IAction = (id) => {
+  return {
+    type: Action.ToggleEditLog,
+    payload: {
+      id,
+    },
+  };
+};
+
+export const toggleViewLog: (id: string) => IAction = (id) => {
+  return {
+    type: Action.ToggleViewLog,
+    payload: {
+      id,
+    },
+  };
+};
+
 // notification actions
 export const addNotification: (
   type: string,
@@ -127,6 +149,24 @@ export const setLogs: (logs: ILog[]) => IAction = (logs) => {
     type: Action.SetLogs,
     payload: {
       logs,
+    },
+  };
+};
+
+export const updateLog: (log: ILog) => IAction = (log) => {
+  return {
+    type: Action.UpdateLog,
+    payload: {
+      log,
+    },
+  };
+};
+
+export const deleteLog: (id: string) => IAction = (id) => {
+  return {
+    type: Action.DeleteLog,
+    payload: {
+      id,
     },
   };
 };
