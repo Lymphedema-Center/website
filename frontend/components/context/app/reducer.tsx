@@ -184,7 +184,7 @@ const reducer = (state: IContextState, action: IAction) => {
           content: action.payload.content,
         },
       ].sort((a, b) => {
-        if (a.createdAt <= b.createdAt) return -1;
+        if (a.createdAt >= b.createdAt) return -1;
         else return 1;
       });
       localStorage.setItem("logs", JSON.stringify(newLogs));
@@ -193,15 +193,20 @@ const reducer = (state: IContextState, action: IAction) => {
         logs: newLogs,
       };
     case Action.SetLogs:
+      newLogs = action.payload.logs;
+      newLogs.sort((a, b) => {
+        if (a.createdAt >= b.createdAt) return -1;
+        else return 1;
+      });
       return {
         ...state,
-        logs: action.payload.logs,
+        logs: newLogs,
       };
     case Action.UpdateLog:
       newLogs = state.logs.filter((log) => log.id !== action.payload.log.id);
       newLogs.push(action.payload.log);
       newLogs.sort((a, b) => {
-        if (a.createdAt <= b.createdAt) return -1;
+        if (a.createdAt >= b.createdAt) return -1;
         else return 1;
       });
       localStorage.setItem("logs", JSON.stringify(newLogs));
