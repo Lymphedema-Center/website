@@ -12,7 +12,7 @@ import { withHistory } from "slate-history";
 import SlateToolbar from "./SlateToolbar";
 import escapeHtml from "escape-html";
 
-// containers
+// container
 //////////////////////////////////////////////////////////////////
 const OverallContainer = styled.div`
   height: 100%;
