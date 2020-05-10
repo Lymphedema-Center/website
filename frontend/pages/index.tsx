@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { ThemeContext } from "styled-components";
+import { Context as AppContext } from "../components/context/app/context";
+import { toggleSignIn } from "../components/context/app/actions";
 import MWC from "../components/layout/MWC";
 import DecoratedIntro from "../components/composed/DecoratedIntro";
 import LightbulbIcon from "../components/svg/icon/LightbulbIcon";
@@ -74,6 +76,7 @@ const PersonalLogSection = styled(Section)``;
 
 const HomePage = () => {
   const theme = useContext(ThemeContext);
+  const appCtx = useContext(AppContext);
 
   return (
     <Container>
@@ -165,11 +168,19 @@ const HomePage = () => {
               " photos."
             }
           />
-          <Link href="/log" passHref>
-            <SpacedRectangleLink onClick={scrollToTop}>
-              View my Treatment Log
+          {appCtx.state.user ? (
+            <Link href="/log" passHref>
+              <SpacedRectangleLink onClick={scrollToTop}>
+                View my Treatment Log
+              </SpacedRectangleLink>
+            </Link>
+          ) : (
+            <SpacedRectangleLink
+              onClick={() => appCtx.dispatch(toggleSignIn())}
+            >
+              Log In
             </SpacedRectangleLink>
-          </Link>
+          )}
         </PersonalLogSection>
       </PersonalLogMWC>
     </Container>
